@@ -60,12 +60,15 @@
             const data = event.dataTransfer.getData("text");
             const dropzone = event.target;
 
-            // Clear previous items from dropzone
-            while (dropzone.firstChild) {
-                dropzone.removeChild(dropzone.firstChild);
+            // Check if dropzone already has an ingredient
+            if (dropzone.children.length > 0) {
+                const currentIngredient = dropzone.children[0];
+                // Put the current ingredient back to its original position
+                const originalPosition = document.getElementById('ingredients');
+                originalPosition.appendChild(currentIngredient);
             }
 
-            // Append new item
+            // Append the new ingredient to the dropzone
             dropzone.appendChild(document.getElementById(data));
             checkCombination();
         }
