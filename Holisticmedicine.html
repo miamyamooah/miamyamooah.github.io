@@ -62,8 +62,9 @@
             const data = event.dataTransfer.getData("text");
             const dropzone = event.target;
 
-            // If drop zone already has two ingredients, return them to original position
+            // Check if dropzone already has two ingredients
             if (dropzone.children.length >= 2) {
+                // Reset dropzone by moving all children back to original position
                 const originalPosition = document.getElementById('ingredients');
                 while (dropzone.firstChild) {
                     originalPosition.appendChild(dropzone.firstChild);
