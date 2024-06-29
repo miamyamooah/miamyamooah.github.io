@@ -84,27 +84,26 @@
 
         function checkCombination() {
             const dropzone = document.getElementById('dropzone1');
-            const ingredients = dropzone.getElementsByClassName('ingredient');
-            const resultText = document.getElementById('result');
+            const ingredients = Array.from(dropzone.getElementsByClassName('ingredient')).map(elem => elem.innerText);
 
             if (ingredients.length === 2) {
-                const ingredient1 = ingredients[0].innerText;
-                const ingredient2 = ingredients[1].innerText;
+                const ingredient1 = ingredients[0];
+                const ingredient2 = ingredients[1];
 
                 if ((ingredient1 === 'Lavender' && ingredient2 === 'Chamomile') ||
                     (ingredient1 === 'Chamomile' && ingredient2 === 'Lavender')) {
-                    resultText.innerHTML = "You've created a calming holistic medicine with Lavender and Chamomile. This combination is often used for relaxation and stress relief.";
+                    setResult("You've created a calming holistic medicine with Lavender and Chamomile. This combination is often used for relaxation and stress relief.");
                 } else if ((ingredient1 === 'Peppermint' && ingredient2 === 'Eucalyptus') ||
                            (ingredient1 === 'Eucalyptus' && ingredient2 === 'Peppermint')) {
-                    resultText.innerHTML = "You've created an invigorating holistic medicine with Peppermint and Eucalyptus. This combination is known for its refreshing and respiratory benefits.";
+                    setResult("You've created an invigorating holistic medicine with Peppermint and Eucalyptus. This combination is known for its refreshing and respiratory benefits.");
                 } else if ((ingredient1 === 'Lemon Balm' && ingredient2 === 'Peppermint') ||
                            (ingredient1 === 'Peppermint' && ingredient2 === 'Lemon Balm')) {
-                    resultText.innerHTML = "You've created a soothing holistic medicine with Lemon Balm and Peppermint. This combination can support digestion and respiratory health.";
+                    setResult("You've created a soothing holistic medicine with Lemon Balm and Peppermint. This combination can support digestion and respiratory health.");
                 } else {
-                    resultText.innerText = "Try again! That combination doesn't work.";
+                    setResult("Try again! That combination doesn't work.");
                 }
             } else {
-                resultText.innerText = "";
+                setResult("");
             }
         }
 
@@ -118,8 +117,11 @@
             }
 
             // Clear result text
-            const resultText = document.getElementById('result');
-            resultText.innerText = "";
+            setResult("");
+        }
+
+        function setResult(message) {
+            document.getElementById('result').innerText = message;
         }
     </script>
 </body>
