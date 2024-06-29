@@ -58,7 +58,15 @@
         function drop(event) {
             event.preventDefault();
             const data = event.dataTransfer.getData("text");
-            event.target.appendChild(document.getElementById(data));
+            const dropzone = event.target;
+
+            // Clear previous items from dropzone
+            while (dropzone.firstChild) {
+                dropzone.removeChild(dropzone.firstChild);
+            }
+
+            // Append new item
+            dropzone.appendChild(document.getElementById(data));
             checkCombination();
         }
 
@@ -70,10 +78,19 @@
                 combination += ingredients[i].innerText + ' ';
             }
 
-            const validCombination = "Lavender Chamomile ";
             const resultText = document.getElementById('result');
             if (combination.includes('Lavender') && combination.includes('Chamomile')) {
-                resultText.innerText = "Great job! You've created a calming holistic medicine.";
+                resultText.innerHTML = "You've created a calming holistic medicine with Lavender and Chamomile. This combination is often used for relaxation and stress relief.";
+            } else if (combination.includes('Peppermint') && combination.includes('Eucalyptus')) {
+                resultText.innerHTML = "You've created an invigorating holistic medicine with Peppermint and Eucalyptus. This combination is known for its refreshing and respiratory benefits.";
+            } else if (combination.includes('Lemon Balm') && combination.includes('Ginger')) {
+                resultText.innerHTML = "You've created a revitalizing holistic medicine with Lemon Balm and Ginger. This combination can support digestion and overall well-being.";
+            } else if (combination.includes('Rosemary') && combination.includes('Cinnamon')) {
+                resultText.innerHTML = "You've created a warming holistic medicine with Rosemary and Cinnamon. This combination is often used for circulation and mental clarity.";
+            } else if (combination.includes('Turmeric') && combination.includes('Ginger')) {
+                resultText.innerHTML = "You've created an anti-inflammatory holistic medicine with Turmeric and Ginger. This combination is known for its joint health benefits.";
+            } else if (combination.includes('Valerian') && combination.includes('Lemon Balm')) {
+                resultText.innerHTML = "You've created a calming holistic medicine with Valerian and Lemon Balm. This combination is often used for sleep support and relaxation.";
             } else {
                 resultText.innerText = "Try again! That combination doesn't work.";
             }
