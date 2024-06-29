@@ -33,16 +33,18 @@
 <body>
     <h2>Create Your Holistic Medicine</h2>
     <p>Drag and drop the correct ingredients into the dropzone to create a holistic medicine.</p>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient1">Lavender</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient2">Chamomile</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient3">Peppermint</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient4">Eucalyptus</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient5">Lemon Balm</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient6">Ginger</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient7">Rosemary</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient8">Cinnamon</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient9">Turmeric</div>
-    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient10">Valerian</div>
+    <div id="ingredients">
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient1">Lavender</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient2">Chamomile</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient3">Peppermint</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient4">Eucalyptus</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient5">Lemon Balm</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient6">Ginger</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient7">Rosemary</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient8">Cinnamon</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient9">Turmeric</div>
+        <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient10">Valerian</div>
+    </div>
     <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropzone1">Drop Here</div>
     <p id="result"></p>
 
