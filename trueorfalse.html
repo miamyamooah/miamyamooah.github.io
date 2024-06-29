@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>True or False Quiz on Holistic Medicine</title>
+</head>
+<body>
+    <h2>True or False: Holistic Medicine</h2>
+    <form id="quizForm">
+        <p>1. Holistic medicine only treats physical symptoms. 
+        <input type="radio" name="q1" value="false"> False 
+        <input type="radio" name="q1" value="true"> True</p>
+
+        <p>2. Aromatherapy can help improve mood and reduce stress. 
+        <input type="radio" name="q2" value="true"> True 
+        <input type="radio" name="q2" value="false"> False</p>
+
+        <p>3. Yoga is solely for physical exercise. 
+        <input type="radio" name="q3" value="false"> False 
+        <input type="radio" name="q3" value="true"> True</p>
+
+        <p>4. Homeopathy uses highly diluted substances to trigger the body's natural healing process. 
+        <input type="radio" name="q4" value="true"> True 
+        <input type="radio" name="q4" value="false"> False</p>
+
+        <p>5. Holistic practices focus on treating the whole person, including mind, body, and spirit. 
+        <input type="radio" name="q5" value="true"> True 
+        <input type="radio" name="q5" value="false"> False</p>
+
+        <p>6. Essential oils used in aromatherapy can only be applied topically. 
+        <input type="radio" name="q6" value="false"> False 
+        <input type="radio" name="q6" value="true"> True</p>
+
+        <button type="button" onclick="checkTrueFalse()">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkTrueFalse() {
+            const answers = {
+                q1: 'false',
+                q2: 'true',
+                q3: 'false',
+                q4: 'true',
+                q5: 'true',
+                q6: 'false'
+            };
+
+            let score = 0;
+
+            for (let i = 1; i <= 6; i++) {
+                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`)?.value;
+                if (userAnswer === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            document.getElementById('result').innerText = `You got ${score} out of 6 correct. ${score === 6 ? 'Great job!' : 'Try again!'}`;
+        }
+    </script>
+</body>
+</html>
