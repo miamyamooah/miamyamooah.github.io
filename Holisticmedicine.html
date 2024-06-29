@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Your Holistic Medicine</title>
+    <style>
+        .ingredient {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: inline-block;
+            background-color: #e0e0e0;
+            text-align: center;
+            line-height: 100px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .dropzone {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border: 2px dashed #000;
+            display: inline-block;
+            text-align: center;
+            line-height: 200px;
+            font-size: 16px;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Create Your Holistic Medicine</h2>
+    <p>Drag and drop the correct ingredients into the dropzone to create a holistic medicine.</p>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient1">Lavender</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient2">Chamomile</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient3">Peppermint</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient4">Eucalyptus</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient5">Lemon Balm</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient6">Ginger</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient7">Rosemary</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient8">Cinnamon</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient9">Turmeric</div>
+    <div class="ingredient" draggable="true" ondragstart="drag(event)" id="ingredient10">Valerian</div>
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)" id="dropzone1">Drop Here</div>
+    <p id="result"></p>
+
+    <script>
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drag(event) {
+            event.dataTransfer.setData("text", event.target.id);
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            const data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+            checkCombination();
+        }
+
+        function checkCombination() {
+            const dropzone = document.getElementById('dropzone1');
+            const ingredients = dropzone.getElementsByClassName('ingredient');
+            let combination = '';
+            for (let i = 0; i < ingredients.length; i++) {
+                combination += ingredients[i].innerText + ' ';
+            }
+
+            const validCombination = "Lavender Chamomile ";
+            const resultText = document.getElementById('result');
+            if (combination.includes('Lavender') && combination.includes('Chamomile')) {
+                resultText.innerText = "Great job! You've created a calming holistic medicine.";
+            } else {
+                resultText.innerText = "Try again! That combination doesn't work.";
+            }
+        }
+    </script>
+</body>
+</html>
