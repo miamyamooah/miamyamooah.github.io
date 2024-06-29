@@ -59,7 +59,7 @@
 
             // Check if dropzone already has an ingredient
             if (dropzone.children.length === 1) {
-                // Reset dropzone by moving the current ingredient back to original position
+                // Reset dropzone by moving the current ingredient back to its original position
                 const originalPosition = document.getElementById('ingredients');
                 originalPosition.appendChild(dropzone.firstChild);
             }
@@ -75,15 +75,15 @@
 
             const resultText = document.getElementById('result');
             if (ingredient) {
-                if (ingredient.innerText === 'Lavender' && dropzone.children.length === 1) {
+                if (ingredient.innerText === 'Lavender') {
                     resultText.innerHTML = "You've created a calming holistic medicine with Lavender. This ingredient is often used for relaxation and stress relief.";
-                } else if (ingredient.innerText === 'Chamomile' && dropzone.children.length === 1) {
+                } else if (ingredient.innerText === 'Chamomile') {
                     resultText.innerHTML = "You've created a calming holistic medicine with Chamomile. This ingredient is known for its calming effects and digestive support.";
-                } else if (ingredient.innerText === 'Peppermint' && dropzone.children.length === 1) {
+                } else if (ingredient.innerText === 'Peppermint') {
                     resultText.innerHTML = "You've created a refreshing holistic medicine with Peppermint. This ingredient is used for digestion and respiratory support.";
-                } else if (ingredient.innerText === 'Eucalyptus' && dropzone.children.length === 1) {
+                } else if (ingredient.innerText === 'Eucalyptus') {
                     resultText.innerHTML = "You've created an invigorating holistic medicine with Eucalyptus. This ingredient is known for its respiratory benefits and mental clarity.";
-                } else if (ingredient.innerText === 'Lemon Balm' && dropzone.children.length === 1) {
+                } else if (ingredient.innerText === 'Lemon Balm') {
                     resultText.innerHTML = "You've created a soothing holistic medicine with Lemon Balm. This ingredient is often used for relaxation and stress reduction.";
                 } else {
                     resultText.innerText = "Try again! Select one ingredient to create a holistic medicine.";
