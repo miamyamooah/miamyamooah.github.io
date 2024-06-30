@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Videos and Blogs</title>
+</head>
+<body>
+    <header>
+        <h1>Additional Videos and Blogs</h1>
+        <p>Explore multimedia and written resources on Sylvia Plath's <em>The Bell Jar</em></p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Back to Main</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="videos">
+            <h2>Educational Videos</h2>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=wCWl8ZIgCHk" target="_blank">Video: Sylvia Plath's <em>The Bell Jar</em> Analysis</a></li>
+                <li><a href="#">Video Discussion Panel: Exploring Symbolism in Literature</a></li>
+            </ul>
+        </section>
+        
+        <section id="blogs">
+            <h2>Blog Posts</h2>
+            <ul>
+                <li><a href="https://blog.example.com/sylvia-plath-the-bell-jar" target="_blank">Blog: Understanding the Fig Tree Metaphor</a></li>
+                <li><a href="#">Blog Series on Mental Health in Literature</a></li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
