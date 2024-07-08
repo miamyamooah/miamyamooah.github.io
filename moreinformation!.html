@@ -2,6 +2,71 @@
 <html lang="en">
 <head>
     <title>Cool Stuff</title>
+     <style>
+        body {
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-style: italic;
+            color: lightblue;
+            margin: 0;
+        }
+        nav {
+            background-color: lightblue;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: darkblue;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #ddd;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        .container img {
+            max-width: 50%;
+            height: auto;
+            margin-right: 20px;
+        }
+        .container p {
+            max-width: 50%;
+        }
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -10,10 +75,11 @@
     </header>
     <nav>
         <ul>
-            <a href="https://miamyamooah.github.io/midterm.html">Silvia's Legacy</a> |
-            <a href="https://miamyamooah.github.io/thefigtree.html">The Fig Tree</a> |
-            <a href="https://miamyamooah.github.io/moreinformation!.html">More Stuff!</a> |
+            <li><a href="https://miamyamooah.github.io/midterm.html">Silvia's Legacy</a></li>
+            <li><a href="https://miamyamooah.github.io/thefigtree.html">The Fig Tree</a></li>
+            <li><a href="https://miamyamooah.github.io/moreinformation!.html">More Stuff!</a></li>
         </ul>
+    </nav>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,5 +122,9 @@
         <li><a href="https://www.thriftbooks.com/w/the-bell-jar-by-sylvia-plath/246562/#edition=2990185&idiq=10288680" target="_blank">Physical Book</a></li>    
     </ul>
     </main>
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a></p>
+    </footer>
 </body>
 </html>
