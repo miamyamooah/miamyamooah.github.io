@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Talk Sylvia Plath!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #add8e6; /* Light blue */
+            padding: 20px;
+            text-align: center;
+        }
+        .comment-section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .comment {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .comment form {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Interactive Discussion</h1>
+        <p>Share your thoughts and see what others are saying!</p>
+    </header>
+
+    <div class="comment-section">
+        <h2>Discussion</h2>
+        <div id="comments"></div>
+        
+        <form id="comment-form">
+            <label for="comment">Share your thoughts:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get the comment input value
+            var comment = document.getElementById('comment').value.trim();
+            
+            if (comment !== '') {
+                // Create a new comment element
+                var newComment = document.createElement('div');
+                newComment.classList.add('comment');
+                newComment.textContent = comment;
+                
+                // Append the new comment to the comments container
+                document.getElementById('comments').appendChild(newComment);
+                
+                // Clear the comment textarea
+                document.getElementById('comment').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
