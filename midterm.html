@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <title>The Bell Jar</title>
-     <style>
+    <style>
         body {
             font-size: 16px;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
             background-color: darkblue;
@@ -49,15 +52,28 @@
         .container {
             display: flex;
             align-items: center;
-            margin: 20px;
+            flex-direction: column;
+            margin: 20px 0;
         }
         .container img {
             max-width: 50%;
             height: auto;
-            margin-right: 20px;
+            margin-bottom: 20px;
         }
         .container p {
-            max-width: 50%;
+            max-width: 80%;
+        }
+        .blue-box {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            max-width: 80%;
+            text-align: center;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
         }
         footer {
             background-color: #f1f1f1;
@@ -71,7 +87,7 @@
         <h1>The Fig Tree Metaphor in Sylvia Plath's <em>The Bell Jar</em></h1>
         <p>An in-depth exploration of a powerful literary symbol</p>
     </header>
-     <nav>
+    <nav>
         <ul>
             <li><a href="https://miamyamooah.github.io/midterm.html">Silvia's Legacy</a></li>
             <li><a href="https://miamyamooah.github.io/thefigtree.html">The Fig Tree</a></li>
@@ -80,31 +96,38 @@
     </nav>
     <main>
         <div class="image-container">
-        <img src="https://media.poetryfoundation.org/uploads/media/default/0001/16/9335c30d45c8a838017ed7508083bc341aa50e73.jpeg" alt="Sylvia Plath">
+            <img src="https://media.poetryfoundation.org/uploads/media/default/0001/16/9335c30d45c8a838017ed7508083bc341aa50e73.jpeg" alt="Sylvia Plath">
         </div>
-        <body>
-            <h2>Overview of <em>The Bell Jar</em></h2>
-            <p><strong>Publication History:</strong> <em>The Bell Jar</em> was first published in January 1963 under the pseudonym Victoria Lucas. It initially received mixed reviews but has since become a classic, widely praised for its unflinching portrayal of mental illness and its critique of societal expectations for women.</p>
-            
-            <p><strong>Plot Summary:</strong> The novel follows Esther Greenwood, a young and talented writer who wins an internship at a prestigious magazine in New York City. Despite her outward success, Esther feels increasingly isolated and disconnected. The story details her struggles with depression, her experiences with psychiatric treatment, and her search for identity and meaning in a society that imposes restrictive roles on women.</p>
-            
-            <p><strong>Themes:</strong> <em>The Bell Jar</em> explores several profound themes:
-                <ul>
-                    <li><strong>Mental Illness:</strong> The novel provides an intimate portrayal of Esther's descent into depression, reflecting the broader struggles of those dealing with mental health issues.</li>
-                    <li><strong>Identity and Self-Discovery:</strong> Esther's journey is also one of self-discovery, as she grapples with her own desires and ambitions in contrast to societal expectations.</li>
-                    <li><strong>Societal Expectations:</strong> The book critiques the limited roles available to women in the 1950s and 1960s, highlighting the pressures to conform and the consequences of resisting these norms.</li>
-                    <li><strong>Autonomy and Control:</strong> Throughout the novel, Esther seeks control over her own life and destiny, a struggle symbolized by the recurring imagery of the bell jar.</li>
-                </ul>
-            </p>
-
-            <h2>Context and Significance</h2>
-            <p><strong>Historical Context:</strong> Set in the 1950s, <em>The Bell Jar</em> reflects the era's social norms and expectations, particularly regarding women's roles. During this time, women were often expected to prioritize marriage and family over personal and professional aspirations. This backdrop is crucial for understanding the protagonist's sense of entrapment and the novel's critique of these societal norms.</p>
-            
-            <p><strong>Autobiographical Elements:</strong> Many aspects of <em>The Bell Jar</em> are drawn from Sylvia Plath's own experiences, including her time at Smith College, her internship at <em>Mademoiselle</em> magazine, and her struggles with mental health. These autobiographical elements lend authenticity and depth to the narrative, making Esther's story resonate with readers.</p>
+        <div class="container">
+            <div class="blue-box">
+                <h2>Overview of <em>The Bell Jar</em></h2>
+                <p><strong>Publication History:</strong> <em>The Bell Jar</em> was first published in January 1963 under the pseudonym Victoria Lucas. It initially received mixed reviews but has since become a classic, widely praised for its unflinching portrayal of mental illness and its critique of societal expectations for women.</p>
+            </div>
+            <div class="blue-box">
+                <p><strong>Plot Summary:</strong> The novel follows Esther Greenwood, a young and talented writer who wins an internship at a prestigious magazine in New York City. Despite her outward success, Esther feels increasingly isolated and disconnected. The story details her struggles with depression, her experiences with psychiatric treatment, and her search for identity and meaning in a society that imposes restrictive roles on women.</p>
+            </div>
+            <div class="blue-box">
+                <p><strong>Themes:</strong> <em>The Bell Jar</em> explores several profound themes:
+                    <ul>
+                        <li><strong>Mental Illness:</strong> The novel provides an intimate portrayal of Esther's descent into depression, reflecting the broader struggles of those dealing with mental health issues.</li>
+                        <li><strong>Identity and Self-Discovery:</strong> Esther's journey is also one of self-discovery, as she grapples with her own desires and ambitions in contrast to societal expectations.</li>
+                        <li><strong>Societal Expectations:</strong> The book critiques the limited roles available to women in the 1950s and 1960s, highlighting the pressures to conform and the consequences of resisting these norms.</li>
+                        <li><strong>Autonomy and Control:</strong> Throughout the novel, Esther seeks control over her own life and destiny, a struggle symbolized by the recurring imagery of the bell jar.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="blue-box">
+                <h2>Context and Significance</h2>
+                <p><strong>Historical Context:</strong> Set in the 1950s, <em>The Bell Jar</em> reflects the era's social norms and expectations, particularly regarding women's roles. During this time, women were often expected to prioritize marriage and family over personal and professional aspirations. This backdrop is crucial for understanding the protagonist's sense of entrapment and the novel's critique of these societal norms.</p>
+            </div>
+            <div class="blue-box">
+                <p><strong>Autobiographical Elements:</strong> Many aspects of <em>The Bell Jar</em> are drawn from Sylvia Plath's own experiences, including her time at Smith College, her internship at <em>Mademoiselle</em> magazine, and her struggles with mental health. These autobiographical elements lend authenticity and depth to the narrative, making Esther's story resonate with readers.</p>
+            </div>
         </div>
     </main>
-     <footer>
+    <footer>
         <p>&copy; 2024 Mariah McHale. All rights reserved.</p>
         <p>Contact information: <a href="mailto:mariahmchale13@gmail.com">mariahmchale13@gmail.com</a></p>
-    </footer></body>
+    </footer>
+</body>
 </html>
