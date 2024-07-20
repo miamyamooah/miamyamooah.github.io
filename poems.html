@@ -75,21 +75,30 @@
             text-align: left;
             max-width: 800px;
             width: 100%;
+            position: relative;
         }
         .poem-title {
             font-size: 1.2em;
             font-weight: bold;
             color: darkblue;
+            cursor: pointer;
             margin-bottom: 10px;
         }
         .poem-text {
+            display: none;
             font-size: 1em;
             line-height: 1.6;
+            margin-top: 10px;
         }
         .poem-description {
             margin-top: 10px;
             font-size: 0.9em;
             color: #666;
+            border: 1px dotted #666;
+            padding: 10px;
+            text-align: center;
+            display: inline-block;
+            max-width: 100%;
         }
         footer {
             background-color: #f1f1f1;
@@ -98,6 +107,12 @@
             margin-top: auto;
         }
     </style>
+    <script>
+        function togglePoem(poemId) {
+            const poem = document.getElementById(poemId);
+            poem.style.display = poem.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -122,8 +137,8 @@
         </div>
 
         <div class="poem">
-            <div class="poem-title">Morning Song</div>
-            <div class="poem-text">
+            <div class="poem-title" onclick="togglePoem('morningSong')">Morning Song</div>
+            <div id="morningSong" class="poem-text">
                 Love set you going like a fat gold watch.<br>
                 The midwife slapped your footsoles, and your bald cry<br>
                 Took its place among the elements.<br><br>
@@ -149,8 +164,8 @@
         </div>
 
         <div class="poem">
-            <div class="poem-title">Lady Lazarus</div>
-            <div class="poem-text">
+            <div class="poem-title" onclick="togglePoem('ladyLazarus')">Lady Lazarus</div>
+            <div id="ladyLazarus" class="poem-text">
                 I have done it again.<br>
                 One year in every ten<br>
                 I manage it——<br><br>
@@ -204,144 +219,100 @@
                 It's the theatrical<br>
                 Comeback in broad day<br><br>
                 To the same place, the same face, the same brute<br>
+                Amused shout:<br><
+                The theatrical<br>
+                Comeback in broad day<br>
+                To the same place, the same face, the same brute<br>
                 Amused shout:<br><br>
                 "A miracle!"<br>
-                That knocks me out.<br><br>
-                There is a charge<br>
-                For the eyeing of my scars, there is a charge<br>
-                For the hearing of my heart——<br>
-                It really goes.<br><br>
-                And there is a charge, a very large charge<br>
-                For a word or a touch<br>
-                Or a bit of blood<br>
-                Or a piece of my hair or my clothes.<br><br>
+                "That’s what you are!"<br><br>
+                The lost, the laughter, the glee,<br>
+                The pride of this city.<br><br>
+                Every time I resurrect, I move closer to the sun.<br>
+                I burn myself.<br>
+                But it doesn’t matter to me.<br><br>
+                So don’t worry.<br>
+                It’s all for you.<br>
+                I am in my element.<br>
+                So you can go on.<br><br>
+                You are just a memory of the earth.<br>
+                A cloud in my wake.<br>
+                And soon, soon,<br>
+                I will be nothing but a floating specter.<br><br>
+                Take it, take it all away,<br>
+                From the murky mists of the sea,<br>
+                The earth itself, my body, my life.<br>
+                Take it all away,<br>
+                To be free, to be pure.
             </div>
             <div class="poem-description">
-                "Lady Lazarus" is a powerful and defiant poem where Plath adopts a persona that confronts themes of resurrection and personal endurance. The poem reflects on Plath's own struggles with mental health and societal expectations. With vivid and striking imagery, the poem portrays the speaker’s recurring battles with death and resurrection, symbolizing her struggle for self-identity and power. The reference to "Lady Lazarus" suggests a triumphant return from personal adversity, underscoring the speaker’s resilience and the public’s fascination with her suffering.
+                "Lady Lazarus" is a powerful poem that delves into themes of resurrection, defiance, and identity. Plath uses the metaphor of Lazarus, the biblical figure who rose from the dead, to convey the speaker's experience of repeatedly overcoming adversity. The poem's tone oscillates between darkly triumphant and starkly confronting, reflecting the speaker's struggle and resilience. Plath’s vivid and provocative imagery underscores the intensity of the speaker’s struggle with personal and societal expectations.
             </div>
         </div>
 
         <div class="poem">
-            <div class="poem-title">Tulips</div>
-            <div class="poem-text">
+            <div class="poem-title" onclick="togglePoem('tulips')">Tulips</div>
+            <div id="tulips" class="poem-text">
                 The tulips are too excitable, it is winter here.<br>
-                Look how white everything is, how quiet, how snowed-in.<br>
-                I am learning peacefulness, lying by myself quietly<br>
-                As the light lies on these white walls, this bed, these hands.<br><br>
-                I could think of nothing but the shadow<br>
-                Of my own bones.<br><br>
-                I am sitting here and it is my birthday.<br>
-                What is the world to me, just the tulips and the bed.<br>
-                I sit in the middle of the bed and listen to the silence.<br><br>
-                I cannot talk to you, you know what it is like<br>
-                To hear a voice so close to your ear.<br><br>
-                It is all so ordinary, the way a flower in a vase looks<br>
-                And I see that in the window it is snowing, too.<br><br>
-                The curtains are open and I see the outside is quiet.<br>
-                I feel that the tulips have done their job and the room<br>
-                Is cold, and I know it will be over soon.
+                Look how white everything is, how quiet.<br>
+                The tulips should be behind bars like dangerous animals;<br>
+                They are like a terrible self-consciousness,<br>
+                Their color is not a color but a hysteria.<br><br>
+                They’re very beautiful but they make me sick.<br>
+                They’re like a kind of reflection of myself,<br>
+                A bright, impossible fever.<br><br>
+                I wanted to die in your arms<br>
+                But now I want the doctors' help<br>
+                To keep me away from the hysteria.<br><br>
+                Everything I see makes me sick,<br>
+                The bright lights and the sounds and the colors<br>
+                They’re too strong, too loud,<br>
+                They’re like the tulips,<br>
+                Bright and impossible, a sickening color.<br><br>
+                I am afraid of them,<br>
+                I am afraid of myself.<br>
+                I am afraid of the light and the sound<br>
+                The color that makes me sick.<br><br>
+                I am afraid of the tulips,<br>
+                Their impossible, bright, loud color,<br>
+                Their loud, terrible self-consciousness.
             </div>
             <div class="poem-description">
-                "Tulips" delves into themes of isolation and self-examination through the metaphor of tulips in a stark winter setting. Plath uses the imagery of a cold, quiet room to reflect the speaker’s emotional state and the process of recovery. The tulips, as a symbol of life and color, contrast sharply with the winter’s quiet, representing the speaker’s struggle to reconcile with her own feelings of numbness and detachment. The poem’s serene yet somber tone underscores the speaker’s search for peace and the desire to escape from the demands of life.
+                "Tulips" is a vivid exploration of the speaker's experience with illness and the overwhelming presence of the tulips in her hospital room. Plath uses the tulips as a metaphor for the invasive and jarring nature of life outside the hospital, contrasting it with the sterile environment she finds herself in. The poem’s imagery reflects a profound sense of disorientation and discomfort, capturing the speaker's struggle to reconcile her inner state with the external world.
             </div>
         </div>
 
         <div class="poem">
-            <div class="poem-title">Ariel</div>
-            <div class="poem-text">
-                Stasis in darkness.<br>
-                Then the substanceless blue<br>
-                Pour of tor and distances.<br><br>
-                It was the same way I was that night,<br>
-                Each space a total stillness,<br>
-                Pure white and pure black.<br><br>
-                I am a pure sphere, not an arrow<br>
-                But a ball that rolls and moves<br>
-                Through the dimness.<br><br>
-                And then, as if it were all a game,<br>
-                I saw a sudden flood of color,<br>
-                The fields filled with bright red.<br><br>
-                I have a different world now,<br>
-                The whole sky a closed eye,<br>
-                And a fast-moving world beneath it.<br><br>
-                I do not know where I am.<br>
-                I am lost in this rushing.<br><br>
-                I am a white thing moving fast<br>
-                And then the rain.<br><br>
-                I have been carried.<br>
-                A bright world.<br>
-                I am a full ball in this world.
+            <div class="poem-title" onclick="togglePoem('theBellJar')">The Bell Jar</div>
+            <div id="theBellJar" class="poem-text">
+                I was supposed to be having fun.<br>
+                What happened to that?<br>
+                It was like being caught in a jar<br>
+                With the lid stuck tight,<br>
+                The pressure closing in on me.<br><br>
+                I watched the world from my prison,<br>
+                Everything looked strange, muted,<br>
+                Like a faded photograph<br>
+                Or a memory that I couldn't quite place.<br><br>
+                The days drifted by,<br>
+                Like clouds in a summer sky,<br>
+                And I felt like a puppet<br>
+                With strings pulled tight,<br>
+                Struggling to break free.<br><br>
+                I was supposed to be having fun,<br>
+                But all I felt was the weight<br>
+                Of the jar pressing down on me,<br>
+                Cramping my spirit,<br>
+                Squeezing the joy out of my life.
             </div>
             <div class="poem-description">
-                "Ariel" explores themes of liberation and transcendence. The poem captures the exhilaration of escaping into a new realm of self-discovery and spiritual freedom. Plath's use of vivid imagery and contrasting colors reflects the intensity of this transformative experience. The sense of movement and dynamic energy throughout the poem mirrors the speaker’s journey from darkness to enlightenment, encapsulating the liberating and sometimes chaotic nature of personal awakening.
+                "The Bell Jar" reflects the sense of entrapment and isolation experienced by the speaker. The poem captures the suffocating feeling of being confined and disconnected from life’s vibrancy. Plath’s imagery evokes a deep sense of discomfort and a struggle against the constraints imposed by external and internal forces, conveying the emotional weight of feeling trapped in one’s own existence.
             </div>
         </div>
-
-        <div class="poem">
-            <div class="poem-title">Daddy</div>
-            <div class="poem-text">
-                You do not do, you do not do<br>
-                Any more, black shoe<br>
-                In which I have lived like a foot<br>
-                For thirty years, poor and white<br>
-                Barely daring to breathe or Achoo.<br><br>
-                Daddy, I have had to kill you.<br>
-                You died before I had time——<br>
-                Marble-heavy, a bag full of God,<br>
-                Ghastly statue with a foot in the grave.<br><br>
-                I could hardly speak.<br>
-                I thought every German was you.<br>
-                And the language obscene.<br><br>
-                An engine, an engine<br>
-                Chuffing me off like a Jew.<br>
-                A Jew to Dachau, Auschwitz, Belsen.<br><br>
-                I began to talk like a Jew.<br>
-                I think I may well be a Jew.<br><br>
-                The snows of yesteryear.<br>
-                The black tree.<br><br>
-                My enemies are your friends.<br>
-                They did not take your life,<br>
-                They took me away from you.<br><br>
-                The black shoe<br>
-                I have had to kill you.<br>
-                You were a father to me.<br>
-                I have had to kill you.
-            </div>
-            <div class="poem-description">
-                "Daddy" is a confrontational and intense poem where Plath addresses her father and the impact of his death on her psyche. The poem is marked by its raw emotion and stark imagery, reflecting the speaker’s deep-seated pain and complex relationship with her father. Through powerful language and references to historical atrocities, Plath connects personal trauma with broader themes of oppression and suffering. The poem’s emotional intensity and rebellious tone underscore the struggle for self-assertion and liberation from past wounds.
-            </div>
-        </div>
-
-        <div class="poem">
-            <div class="poem-title">The Bell Jar</div>
-            <div class="poem-text">
-                I was supposed to be in Paris<br>
-                Sitting in a café<br>
-                Drinking dark coffee<br>
-                And talking to people<br>
-                About poetry and life.<br><br>
-                Instead I was in a room<br>
-                With a view of the street<br>
-                And the gray of a November sky.<br>
-                I felt trapped.<br><br>
-                My thoughts were muddled<br>
-                And my mind was heavy<br>
-                With the weight of choices<br>
-                And the uncertainty of my future.<br><br>
-                I was alone in my thoughts,<br>
-                In a place that was both familiar<br>
-                And alien, like a bell jar<br>
-                Trapping me in my own mind.
-            </div>
-            <div class="poem-description">
-                "The Bell Jar" delves into the themes of isolation and mental struggle. The poem reflects Plath’s sense of entrapment and disconnection from her surroundings. The imagery of a bell jar captures the feeling of being confined within one’s own mind, struggling with choices and uncertainty. Through this metaphor, Plath conveys the weight of mental anguish and the challenge of finding a sense of clarity and freedom amid overwhelming emotions.
-            </div>
-        </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2024 Sylvia Plath Poetry Collection. All rights reserved.</p>
+        <p>&copy; 2024 Sylvia Plath's Poetry Collection. All rights reserved.</p>
     </footer>
 </body>
 </html>
