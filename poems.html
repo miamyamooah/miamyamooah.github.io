@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,165 +6,118 @@
     <title>Sylvia Plath Poetry</title>
     <style>
         body {
+            font-size: 16px;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            color: #333; /* Setting default text color */
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        header {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            font-style: italic;
+            color: lightblue;
+            margin: 0;
+        }
+        nav {
+            background-color: lightblue;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: darkblue; /* Changing nav link color to dark blue */
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #ddd;
+        }
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
         }
         .poem {
-            background: #fff;
-            border-radius: 5px;
-            margin: 20px 0;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            max-width: 800px;
+            width: 100%;
         }
         .poem-title {
-            font-size: 1.5em;
+            font-weight: bold;
             cursor: pointer;
-            color: #333;
+            color: darkblue;
+            padding: 10px;
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            background-color: lightblue;
         }
         .poem-text {
             display: none;
-            font-size: 1.2em;
-            line-height: 1.6;
-            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid darkblue;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
         .poem-description {
-            margin-top: 10px;
-            font-style: italic;
-            text-align: center;
-            border: 1px dotted #ddd;
             padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            border: 1px dashed darkblue;
+            border-radius: 5px;
         }
         footer {
+            background-color: #f1f1f1;
             text-align: center;
             padding: 10px;
-            background: #333;
-            color: #fff;
+            margin-top: auto;
         }
     </style>
     <script>
         function togglePoem(id) {
-            var poemText = document.getElementById(id);
-            if (poemText.style.display === "none") {
-                poemText.style.display = "block";
+            var poem = document.getElementById(id);
+            if (poem.style.display === "none" || poem.style.display === "") {
+                poem.style.display = "block";
             } else {
-                poemText.style.display = "none";
+                poem.style.display = "none";
             }
         }
     </script>
 </head>
 <body>
-    <div class="container">
-        <!-- Daddy -->
-        <div class="poem">
-            <div class="poem-title" onclick="togglePoem('daddy')">Daddy</div>
-            <div id="daddy" class="poem-text">
-                You do not do, you do not do<br>
-                Any more, black shoe<br>
-                In which I have lived like a foot<br>
-                For thirty years, poor and white,<br>
-                Barely daring to breathe or Achoo.<br><br>
+    <header>
+        <h1>Sylvia Plath Poetry</h1>
+        <p>Explore the profound works of Sylvia Plath</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="https://miamyamooah.github.io/midterm.html">Silvia's Legacy</a></li>
+            <li><a href="https://miamyamooah.github.io/thefigtree.html">The Fig Tree</a></li>
+            <li><a href="https://miamyamooah.github.io/discussion.html">Discussion</a></li>
+            <li><a href="https://miamyamooah.github.io/moreinformation!.html">More Stuff!</a></li>
+        </ul>
+    </nav>
 
-                Daddy, I have had to kill you.<br>
-                You died before I had time——<br>
-                Marble-heavy, a bag full of God,<br>
-                Ghastly statue with one gray toe<br>
-                Big as a Frisco seal<br><br>
-
-                And a head in the freakish Atlantic<br>
-                Where it pours bean green over blue<br>
-                In the waters off beautiful Nauset.<br>
-                I used to pray to recover you.<br>
-                Ach, du.<br><br>
-
-                In the German tongue, in the Polish town<br>
-                Scraped flat by the roller<br>
-                Of wars, wars, wars.<br>
-                But the name of the town is common.<br>
-                My Polack friend<br><br>
-
-                Says there are a dozen or two.<br>
-                So I never could tell where you<br>
-                Put your foot, your root,<br>
-                I never could talk to you.<br>
-                The tongue stuck in my jaw.<br><br>
-
-                It stuck in a barb wire snare.<br>
-                Ich, ich, ich, ich,<br>
-                I could hardly speak.<br>
-                I thought every German was you.<br>
-                And the language obscene<br><br>
-
-                An engine, an engine<br>
-                Chuffing me off like a Jew.<br>
-                A Jew to Dachau, Auschwitz, Belsen.<br>
-                I began to talk like a Jew.<br>
-                I think I may well be a Jew.<br><br>
-
-                The snows of the Tyrol, the clear beer of Vienna<br>
-                Are not very pure or true.<br>
-                With my gipsy ancestress and my weird luck<br>
-                And my Taroc pack and my Taroc pack<br>
-                I may be a bit of a Jew.<br><br>
-
-                I have always been scared of you,<br>
-                With your Luftwaffe, your gobbledygoo.<br>
-                And your neat mustache<br>
-                And your Aryan eye, bright blue.<br>
-                Panzer-man, panzer-man, O You——<br><br>
-
-                Not God but a swastika<br>
-                So black no sky could squeak through.<br>
-                Every woman adores a Fascist,<br>
-                The boot in the face, the brute<br>
-                Brute heart of a brute like you.<br><br>
-
-                You stand at the blackboard, daddy,<br>
-                In the picture I have of you,<br>
-                A cleft in your chin instead of your foot<br>
-                But no less a devil for that, no not<br>
-                Any less the black man who<br><br>
-
-                Bit my pretty red heart in two.<br>
-                I was ten when they buried you.<br>
-                At twenty I tried to die<br>
-                And get back, back, back to you.<br>
-                I thought even the bones would do.<br><br>
-
-                But they pulled me out of the sack,<br>
-                And they stuck me together with glue.<br>
-                And then I knew what to do.<br>
-                I made a model of you,<br>
-                A man in black with a Meinkampf look<br><br>
-
-                And a love of the rack and the screw.<br>
-                And I said I do, I do.<br>
-                So daddy, I’m finally through.<br>
-                The black telephone’s off at the root,<br>
-                The voices just can’t worm through.<br><br>
-
-                If I’ve killed one man, I’ve killed two——<br>
-                The vampire who said he was you<br>
-                And drank my blood for a year,<br>
-                Seven years, if you want to know.<br>
-                Daddy, you can lie back now.<br><br>
-
-                There’s a stake in your fat black heart<br>
-                And the villagers never liked you.<br>
-                They are dancing and stamping on you.<br>
-                They always knew it was you.<br>
-                Daddy, daddy, you bastard, I’m through.<br>
-            </div>
-            <div class="poem-description">
-                "Daddy" is a powerful and intense poem that explores themes of oppression, loss, and the struggle for liberation. Through vivid and often disturbing imagery, the speaker confronts their father's legacy and their own psychological turmoil.
-            </div>
-        </div>
-
+    <div class="main-content">
         <!-- Lady Lazarus -->
         <div class="poem">
             <div class="poem-title" onclick="togglePoem('lady-lazarus')">Lady Lazarus</div>
@@ -333,7 +286,7 @@
                 Eye, the cauldron of morning.<br>
             </div>
             <div class="poem-description">
-                "Ariel" is a vivid and dynamic poem that delves into themes of transformation, liberation, and the merging of the self with natural and spiritual forces. The speaker’s journey is marked by intense imagery and a sense of transcendence.
+                "Ariel" presents a vivid, surreal journey of transformation and liberation. The imagery reflects the speaker's movement from darkness to enlightenment and their union with a higher, almost divine force.
             </div>
         </div>
 
@@ -344,14 +297,16 @@
                 The tulips are too excitable, it is winter here.<br>
                 Look how white everything is, how quiet, how snowed-in.<br>
                 I am learning peacefulness, lying by myself quietly<br>
-                As the light lies on these white walls, this bed, these hands.<br>
+                As the light lies on these white walls, this bed, these hands.<br><br>
+
                 I am nobody; I have nothing to do with explosions.<br>
                 I have given my name and my day-clothes up to the nurses<br>
                 And my history to the anesthetist and my body to surgeons.<br><br>
 
                 They have propped my head between the pillow and the sheet-cuff<br>
                 Like an eye between two white lids that will not shut.<br>
-                Stupid pupil, it has to take everything in.<br>
+                Stupid pupil, it has to take everything in.<br><br>
+
                 The nurses pass and pass, they are no trouble,<br>
                 They pass the way gulls pass inland in their white caps,<br>
                 Doing things with their hands, one just the same as another,<br>
@@ -359,7 +314,8 @@
 
                 My body is a pebble to them, they tend it as water<br>
                 Tends to the pebbles it must run over, smoothing them gently.<br>
-                They bring me numbness in their bright needles, they bring me sleep.<br>
+                They bring me numbness in their bright needles, they bring me sleep.<br><br>
+
                 Now I have lost myself I am sick of baggage——<br>
                 My patent leather overnight case like a black pillbox,<br>
                 My husband and child smiling out of the family photo;<br>
@@ -367,7 +323,8 @@
 
                 I have let things slip, a thirty-year-old cargo boat<br>
                 stubbornly hanging on to my name and address.<br>
-                They have swabbed me clear of my loving associations.<br>
+                They have swabbed me clear of my loving associations.<br><br>
+
                 Scared and bare on the green plastic-pillowed trolley<br>
                 I watched my teaset, my bureaus of linen, my books<br>
                 Sink out of sight, and the water went over my head.<br>
@@ -378,12 +335,14 @@
                 How free it is, you have no idea how free——<br>
                 The peacefulness is so big it dazes you,<br>
                 And it asks nothing, a name tag, a few trinkets.<br>
-                It is what the dead close on, finally; I imagine them<br>
+                It is what the dead close on, finally; I imagine them<br><br>
+
                 Shutting their mouths on it, like a Communion tablet.<br><br>
 
                 The tulips are too red in the first place, they hurt me.<br>
                 Even through the gift paper I could hear them breathe<br>
-                Lightly, through their white swaddlings, like an awful baby.<br>
+                Lightly, through their white swaddlings, like an awful baby.<br><br>
+
                 Their redness talks to my wound, it corresponds.<br>
                 They are subtle: they seem to float, though they weigh me down,<br>
                 Upsetting me with their sudden tongues and their color,<br>
@@ -394,7 +353,8 @@
                 Where once a day the light slowly widens and slowly thins,<br>
                 And I see myself, flat, ridiculous, a cut-paper shadow<br>
                 Between the eye of the sun and the eyes of the tulips,<br>
-                And I have no face, I have wanted to efface myself.<br>
+                And I have no face, I have wanted to efface myself.<br><br>
+
                 The vivid tulips eat my oxygen.<br><br>
 
                 Before they came the air was calm enough,<br>
@@ -414,7 +374,7 @@
                 And comes from a country far away as health.<br>
             </div>
             <div class="poem-description">
-                "Tulips" reflects on themes of confinement, identity, and the struggle between the desire for peace and the intrusion of external forces. The speaker's experience in a hospital and their interaction with the vibrant tulips symbolize a clash between tranquility and the overwhelming presence of the outside world.
+                "Tulips" depicts the speaker's struggle with their identity and surroundings after a medical procedure. The poem contrasts the tranquility they seek with the vibrant, intrusive presence of the tulips, reflecting a conflict between inner peace and external realities.
             </div>
         </div>
 
