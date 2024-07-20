@@ -3,375 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sylvia Plath's Poetry</title>
+    <title>Sylvia Plath Poetry</title>
     <style>
         body {
-            font-size: 16px;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            color: #333;
             background-color: #f4f4f4;
         }
-        header {
-            background-color: darkblue;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        h1 {
-            font-style: italic;
-            color: lightblue;
-            margin: 0;
-        }
-        nav {
-            background-color: lightblue;
-            overflow: hidden;
-            padding: 10px 0;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
-        nav ul li a {
-            color: darkblue;
-            text-decoration: none;
-            padding: 10px;
-        }
-        nav ul li a:hover {
-            background-color: #ddd;
-        }
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .container {
+            width: 80%;
+            margin: 0 auto;
             padding: 20px;
-        }
-        .blue-box {
-            background-color: lightblue;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 5px;
-            max-width: 800px;
-            width: 100%;
-            color: darkblue;
         }
         .poem {
-            background-color: #fff;
-            padding: 15px;
-            margin: 10px 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            max-width: 800px;
-            width: 100%;
         }
         .poem-title {
-            font-size: 1.2em;
+            font-size: 24px;
             font-weight: bold;
-            color: darkblue;
             cursor: pointer;
-            margin-bottom: 10px;
-            position: relative;
-            text-align: center;
-        }
-        .poem-title::after {
-            content: '\25BC';
-            font-size: 1.2em;
-            color: darkblue;
-            position: absolute;
-            right: 0;
-            top: 0;
-            transition: transform 0.3s ease;
+            color: #333;
         }
         .poem-text {
             display: none;
-            font-size: 1em;
-            line-height: 1.6;
+            margin-top: 20px;
         }
         .poem-description {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #666;
+            font-style: italic;
+            color: #555;
             text-align: center;
-            border: 1px dotted #666;
-            padding: 10px;
+            border-top: 1px dotted #ddd;
+            padding-top: 10px;
         }
-        .poem.expanded .poem-text {
+        .annotation {
+            color: #0066cc;
+            cursor: pointer;
+            border-bottom: 1px dotted #0066cc;
+        }
+        .tooltip {
+            display: none;
+            position: absolute;
+            background: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        .annotation:hover .tooltip {
             display: block;
         }
-        .poem.expanded .poem-title::after {
-            content: '\25B2'; 
-        }
         footer {
-            background-color: #f1f1f1;
             text-align: center;
             padding: 10px;
-            margin-top: auto;
+            background: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
     <script>
         function togglePoem(id) {
-            var poemElement = document.getElementById(id).parentElement;
-            poemElement.classList.toggle('expanded');
+            var poemText = document.getElementById(id);
+            if (poemText.style.display === 'none') {
+                poemText.style.display = 'block';
+            } else {
+                poemText.style.display = 'none';
+            }
         }
     </script>
 </head>
 <body>
-    <header>
-        <h1>Sylvia Plath's Poetry</h1>
-        <p>A Collection of Selected Poems</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="https://miamyamooah.github.io/midterm.html">Silvia's Legacy</a></li>
-            <li><a href="https://miamyamooah.github.io/thefigtree.html">The Fig Tree</a></li>
-            <li><a href="https://miamyamooah.github.io/poems.html">Sylvia Plath's Poems</a></li>
-            <li><a href="https://miamyamooah.github.io/discussion.html">Discussion</a></li>
-            <li><a href="https://miamyamooah.github.io/moreinformation!.html">More Stuff!</a></li>
-        </ul>
-    </nav>
-    
-    <div class="main-content">
-        <div class="blue-box">
-            <h2>Featured Poems</h2>
-            <p>Explore the following selected poems by Sylvia Plath. Each piece offers a unique glimpse into her complex emotional landscape and literary artistry. Click on each poem to read and reflect on Plath's evocative language and themes.</p>
-        </div>
-
+    <div class="container">
         <div class="poem">
-            <div class="poem-title" onclick="togglePoem('morningSong')">Morning Song</div>
-            <div id="morningSong" class="poem-text">
-                Love set you going like a fat gold watch.<br>
+            <div class="poem-title" onclick="togglePoem('daddy')">Daddy</div>
+            <div id="daddy" class="poem-text">
+                <span class="annotation">You do not do, you do not do</span><span class="tooltip">Indicates the speaker’s emotional struggle with her father’s memory.</span><br>
+                Any more, black shoe<br>
+                In which I have lived like a foot<br>
+                For thirty years, poor and white,<br>
+                Barely daring to breathe or Achoo.<br><br>
+
+                <span class="annotation">Daddy, I have had to kill you.</span><span class="tooltip">Represents the speaker’s need to overcome and let go of the dominating presence of her father.</span><br>
+                You died before I had time—<br>
+                Marble-heavy, a bag full of God,<br>
+                Ghastly statue with a cement eye.<br><br>
+
+                <span class="annotation">I could hardly speak.</span><span class="tooltip">Expresses the speaker’s sense of being silenced or oppressed.</span><br>
+                I thought every German was you.<br>
+                And the language obscene<br>
+                An engine, an engine<br>
+                Chuffing me off like a Jew.<br><br>
+
+                <span class="annotation">I could hardly speak.</span><span class="tooltip">Reflects the speaker’s struggle to express herself due to the overpowering influence of her father.</span><br>
+                I thought every German was you.<br>
+                And the language obscene<br>
+                An engine, an engine<br>
+                Chuffing me off like a Jew.<br><br>
+
+                <span class="annotation">The brute</span><span class="tooltip">Symbolizes the harsh and oppressive force of the father’s memory.</span><br>
+                I used to pray to recover you.<br>
+                Ach, du.<br><br>
+
+                <span class="annotation">The black man</span><span class="tooltip">Represents a destructive force, possibly the speaker’s own feelings of rage or self-hatred.</span><br>
+                With his rope around your neck.<br>
+                I have always been scared of you.<br>
+                And your cute, cute, cute<br>
+                Just like a mother with the exact same face.<br><br>
+
+                <span class="annotation">Daddy, I have had to kill you.</span><span class="tooltip">Represents the ultimate act of liberation and self-assertion against the father’s memory.</span><br>
+                You died before I had time—<br>
+                Marble-heavy, a bag full of God,<br>
+                Ghastly statue with a cement eye.<br><br>
+
+                <span class="annotation">The black man</span><span class="tooltip">Represents the brutal and relentless nature of the father's memory.</span><br>
+                I have had to kill you.<br>
+                You died before I had time—<br>
+                Marble-heavy, a bag full of God,<br>
+                Ghastly statue with a cement eye.<br>
+            </div>
+            <div class="poem-description">
+                "Daddy" is a powerful and intense poem where Plath deals with themes of oppression, loss, and liberation. The speaker’s complex feelings toward her father are expressed through striking and often unsettling imagery, reflecting both personal trauma and a desire to break free from its constraints.
+            </div>
+        </div>
+        <div class="poem">
+            <div class="poem-title" onclick="togglePoem('ariel')">Ariel</div>
+            <div id="ariel" class="poem-text">
+                <span class="annotation">This is the light</span><span class="tooltip">Represents potential and possibility.</span><br>
+                From what I could be,<br>
+                But what a fool I am!<br><br>
+
+                <span class="annotation">Tying my tongue</span><span class="tooltip">Symbolizes a struggle to express oneself.</span><br>
+                In speechless<br>
+                Plenitude.<br><br>
+
+                With it, the world moves,<br>
+                The wide smile.<br>
+                I am the myth.<br><br>
+
+                <span class="annotation">Groping toward the moon</span><span class="tooltip">Symbolizes the pursuit of enlightenment or truth.</span><br>
+                An armful of purple flowers.<br>
+                An armful of white.<br><br>
+
+                <span class="annotation">I am the first</span><span class="tooltip">Represents a sense of uniqueness and new beginnings.</span><br>
+                Between a flowering and the sea.<br>
+                Glimmering, glimmering.<br><br>
+
+                This is the way of the world,<br>
+                In mid-flight<br>
+                As I wake from my dream.<br>
+                I am the sword in the hand.<br>
+                I am the light that transforms.
+            </div>
+            <div class="poem-description">
+                "Ariel" is a vibrant and dynamic poem in which Plath explores themes of transformation and liberation. Through a series of vivid and often surreal images, the speaker undergoes a powerful metamorphosis, moving from a state of confinement to one of freedom and transcendence.
+            </div>
+        </div>
+        <div class="poem">
+            <div class="poem-title" onclick="togglePoem('lady-lazarus')">Lady Lazarus</div>
+            <div id="lady-lazarus" class="poem-text">
+                <span class="annotation">I have done it again.</span><span class="tooltip">The speaker refers to a repetitive act of resurrection or survival.</span><br>
+                One year in every ten<br>
+                I manage it——<br>
+                A sort of walking miracle,<br>
+                My skin bright as a Nazi lampshade,<br><br>
+
+                <span class="annotation">My right foot</span><span class="tooltip">Symbolizes the speaker's sense of identity and individual struggle.</span><br>
+                A paperweight,<br>
+                My life is a novel,<br>
+                A little used book in the attic<br>
+                Of the house of the world.<br><br>
+
+                <span class="annotation">I rise</span><span class="tooltip">Represents the act of overcoming adversity.</span><br>
+                Out of the ash<br>
+                I rise<br>
+                With my red hair<br>
+                And I eat men like air.<br><br>
+
+                <span class="annotation">I have done it again.</span><span class="tooltip">Highlights the speaker's resilience and repetition of overcoming challenges.</span><br>
+                One year in every ten<br>
+                I manage it——<br>
+                A sort of walking miracle,<br>
+                My skin bright as a Nazi lampshade,<br><br>
+
+                <span class="annotation">My right foot</span><span class="tooltip">Symbolizes the speaker's sense of identity and individual struggle.</span><br>
+                A paperweight,<br>
+                My life is a novel,<br>
+                A little used book in the attic<br>
+                Of the house of the world.<br>
+            </div>
+            <div class="poem-description">
+                "Lady Lazarus" deals with themes of resurrection, survival, and defiance. Plath uses the figure of Lady Lazarus to explore the power of overcoming adversity and the ability to rise again from challenges, often employing dark and provocative imagery to convey the speaker’s resilience.
+            </div>
+        </div>
+        <div class="poem">
+            <div class="poem-title" onclick="togglePoem('tulips')">Tulips</div>
+            <div id="tulips" class="poem-text">
+                <span class="annotation">The tulips are too excitable, it is winter here.</span><span class="tooltip">Describes the contrast between the speaker’s desired peaceful state and the disruptive presence of the tulips.</span><br>
+                Look how white everything is, how quiet, how snowed-in.<br>
+                I am learning peacefulness, lying by myself quietly<br>
+                As the light lies on these white walls, this bed, these hands.<br>
+                I am nobody; I have nothing to do with explosions.<br>
+                I have given my name and my day-clothes up to the nurses<br>
+                And my history to the anesthetist and my body to surgeons.<br><br>
+
+                <span class="annotation">They have propped my head between the pillow and the sheet-cuff</span><span class="tooltip">Represents the speaker’s physical and emotional confinement.</span><br>
+                Like an eye between two white lids that will not shut.<br>
+                Stupid pupil, it has to take everything in.<br>
+                The nurses pass and pass, they are no trouble,<br>
+                They pass the way gulls pass inland in their white caps,<br>
+                Doing things with their hands, one just the same as another,<br>
+                So it is impossible to tell how many there are.<br><br>
+
+                <span class="annotation">My body is a pebble to them, they tend it as water</span><span class="tooltip">Describes the speaker’s sense of being just another object to the medical staff.</span><br>
+                Tends to the pebbles it must run over, smoothing them gently.<br>
+                They bring me numbness in their bright needles, they bring me sleep.<br>
+                Now I have lost myself I am sick of baggage——<br>
+                My patent leather overnight case like a black pillbox,<br>
+                My husband and child smiling out of the family photo;<br>
+                Their smiles catch onto my skin, little smiling hooks.<br><br>
+
+                <span class="annotation">I have let things slip, a thirty-year-old cargo boat</span><span class="tooltip">Represents the speaker’s sense of losing control and the burden of personal history.</span><br>
+                stubbornly hanging on to my name and address.<br>
+                They have swabbed me clear of my loving associations.<br>
+                Scared and bare on the green plastic-pillowed trolley<br>
+                I watched my teaset, my bureaus of linen, my books<br>
+                Sink out of sight, and the water went over my head.<br>
+                I am a nun now, I have never been so pure.<br><br>
+
+                <span class="annotation">I didn’t want any flowers,</span><span class="tooltip">Indicates the speaker’s desire for emptiness and peace, rejecting external distractions.</span><br>
+                I only wanted<br>
+                To lie with my hands turned up and be utterly empty.<br>
+                How free it is, you have no idea how free——<br>
+                The peacefulness is so big it dazes you,<br>
+                And it asks nothing, a name tag, a few trinkets.<br>
+                It is what the dead close on, finally; I imagine them<br>
+                Shutting their mouths on it, like a Communion tablet.<br><br>
+
+                <span class="annotation">The tulips are too red</span><span class="tooltip">Represents the disruptive and jarring nature of the tulips against the speaker’s desired tranquility.</span><br>
+                In the first place, they hurt me.<br>
+                Even through the gift paper I could hear them breathe<br>
+                Lightly, through their white swaddlings, like an awful baby.<br>
+                Their redness talks to my wound, it corresponds.<br>
+                They are subtle : they seem to float, though they weigh me down,<br>
+                Upsetting me with their sudden tongues and their color,<br>
+                A dozen red lead sinkers round my neck.<br><br>
+
+                <span class="annotation">Nobody watched me before,</span><span class="tooltip">The tulips are seen as a symbol of intrusion and unwanted attention.</span><br>
+                Now I am watched.<br>
+                The tulips turn to me, and the window behind me<br>
+                Where once a day the light slowly widens and slowly thins,<br>
+                And I see myself, flat, ridiculous, a cut-paper shadow<br>
+                Between the eye of the sun and the eyes of the tulips,<br>
+                And I have no face, I have wanted to efface myself.<br>
+                The vivid tulips eat my oxygen.<br><br>
+
+                <span class="annotation">Before they came</span><span class="tooltip">Describes the peaceful state before the tulips' intrusion.</span><br>
+                The air was calm enough,<br>
+                Coming and going, breath by breath, without any fuss.<br>
+                Then the tulips filled it up like a loud noise.<br>
+                Now the air snags and eddies round them the way a river<br>
+                Snags and eddies round a sunken rust-red engine.<br>
+                They concentrate my attention, that was happy<br>
+                Playing and resting without committing itself.<br><br>
+
+                <span class="annotation">The walls, also, seem to be warming themselves.</span><span class="tooltip">The walls reflect the speaker's growing awareness of the intrusion of the tulips.</span><br>
+                The tulips should be behind bars like dangerous animals;<br>
+                They are opening like the mouth of some great African cat,<br>
+                And I am aware of my heart: it opens and closes<br>
+                Its bowl of red blooms out of sheer love of me.<br>
+                The water I taste is warm and salt, like the sea,<br>
+                And comes from a country far away as health.
+            </div>
+            <div class="poem-description">
+                "Tulips" reflects a confrontation between the speaker’s desire for peace and the disruptive force of external stimuli. The tulips represent a jarring intrusion into the speaker's state of tranquility, leading to a complex interplay between inner and outer worlds.
+            </div>
+        </div>
+        <div class="poem">
+            <div class="poem-title" onclick="togglePoem('morning-song')">Morning Song</div>
+            <div id="morning-song" class="poem-text">
+                <span class="annotation">Love set you going like a fat gold watch.</span><span class="tooltip">The opening line uses the metaphor of a watch to symbolize the speaker’s affection and the beginning of a new life.</span><br>
                 The midwife slapped your footsoles, and your bald cry<br>
                 Took its place among the elements.<br><br>
-                Our voices echo, magnifying your arrival. New statue.<br>
+
+                <span class="annotation">Our voices echo, magnifying your arrival.</span><span class="tooltip">The speaker's joy and the significance of the newborn’s arrival are emphasized.</span><br>
+                New statue.<br>
                 In a drafty museum, your nakedness<br>
                 Shadows our safety. We stand round blankly as walls.<br><br>
-                I'm no more your mother<br>
+
+                <span class="annotation">I’m no more your mother</span><span class="tooltip">Represents the speaker’s feeling of detachment and disconnection from traditional maternal roles.</span><br>
                 Than the cloud that distills a mirror to reflect its own slow<br>
-                Effacement at the wind's hand.<br><br>
-                All night your moth-breath<br>
+                Effacement at the wind’s hand.<br><br>
+
+                <span class="annotation">All night your moth-breath</span><span class="tooltip">Symbolizes the fragile and delicate nature of the newborn’s presence.</span><br>
                 Flickers among the flat pink roses. I wake to listen:<br>
                 A far sea moves in my ear.<br><br>
-                One cry, and I stumble from bed, cow-heavy and floral<br>
+
+                <span class="annotation">One cry, and I stumble from bed, cow-heavy and floral</span><span class="tooltip">Describes the speaker’s clumsiness and disorientation in response to the baby’s cry.</span><br>
                 In my Victorian nightgown.<br>
-                Your mouth opens clean as a cat's. The window square<br><br>
-                Whitens and swallows its dull stars. And now you try<br>
+                Your mouth opens clean as a cat’s. The window square<br><br>
+
+                <span class="annotation">Whitens and swallows its dull stars.</span><span class="tooltip">Represents the transition from night to morning, symbolizing the new beginning with the baby.</span><br>
+                And now you try<br>
                 Your handful of notes;<br>
                 The clear vowels rise like balloons.
             </div>
             <div class="poem-description">
-                "Morning Song" is a poignant exploration of the speaker’s feelings about motherhood. Sylvia Plath uses striking imagery to depict the transformative experience of bringing a new life into the world. The poem captures both the awe and the raw reality of this experience, with vivid contrasts between the warmth of the maternal bond and the unsettling adjustments that come with it. The tone evolves from the initial shock and wonder to a more introspective and contemplative stance, highlighting the complex emotions associated with becoming a mother.
-            </div>
-        </div>
-
-        <div class="poem">
-            <div class="poem-title" onclick="togglePoem('ladyLazarus')">Lady Lazarus</div>
-            <div id="ladyLazarus" class="poem-text">
-                I have done it again.<br>
-                One year in every ten<br>
-                I manage it——<br><br>
-                A sort of walking miracle, my skin<br>
-                Bright as a Nazi lampshade,<br>
-                My right foot<br>
-                A paperweight,<br>
-                My face a featureless, fine<br>
-                Jew linen.<br><br>
-                Peel off the napkin<br>
-                O my enemy.<br>
-                Do I terrify?——<br><br>
-                The nose, the eye pits, the full set of teeth?<br>
-                The sour breath<br>
-                Will vanish in a day.<br><br>
-                Soon, soon the flesh<br>
-                The grave cave ate will be<br>
-                At home on me<br>
-                And I a smiling woman.<br><br>
-                I am only thirty.<br>
-                And like the cat I have nine times to die.<br><br>
-                This is Number Three.<br>
-                What a trash<br>
-                To annihilate each decade.<br><br>
-                What a million filaments.<br>
-                The peanut-crunching crowd<br>
-                Shoves in to see<br>
-                Them unwrap me hand and foot——<br><br>
-                The big strip tease.<br>
-                Gentleman, ladies<br>
-                These are my hands<br>
-                My knees.<br><br>
-                I may be skin and bone,<br>
-                Nevertheless, I am the same, identical woman.<br><br>
-                The first time it happened I was ten.<br>
-                It was an accident.<br><br>
-                The second time I meant<br>
-                To last it out and not come back at all.<br><br>
-                I rocked shut<br>
-                As a seashell.<br><br>
-                They had to call and call<br>
-                And pick the wormy fruit.<br><br>
-                The third time I was angry.<br>
-                The cakes of soap<br>
-                The tea leaves<br>
-                And the bloody hands<br>
-                Were worth it.<br><br>
-                The gods are with me.<br>
-                The gods are alive.<br>
-                They have given me what I want,<br>
-                And I am the only one<br>
-                Who can feel.<br><br>
-                Oh my enemy, the flesh is a skin.<br>
-                It is all part of me<br>
-                To carry on.<br><br>
-                This is the time.<br>
-                I come into my own<br>
-                The flesh an impossible thing.<br><br>
-                Gentlemen, ladies,<br>
-                Ladies and gentlemen,<br>
-                A toast to our fallen flesh,<br>
-                As this New Year<br>
-                Turns into a slice of mirror.<br><br>
-                Thus, I am the happy woman,<br>
-                The other faces are blind.<br>
-                And my mouth, my ears,<br>
-                My hair, my bones,<br>
-                My living skin,<br>
-                These things I will not surrender,<br>
-                But guard in silence.<br><br>
-                So be it, so be it.<br>
-                I will not give up.<br><br>
-                The price is not to be made.<br>
-                The gods are full of life,<br>
-                And, oh, to remain true<br>
-                And fierce.<br><br>
-                To walk alive in the bones,<br>
-                With a poem in every bone,<br>
-                Is worth it.
-            </div>
-            <div class="poem-description">
-                "Lady Lazarus" is a powerful and defiant poem that explores themes of resurrection and identity. Plath employs a dramatic monologue to depict the speaker's repeated confrontations with death and her determination to reclaim her vitality and autonomy. The poem combines stark, visceral imagery with a tone of both anger and triumph, reflecting the speaker’s struggle to assert her strength and individuality in the face of suffering and societal expectations.
-            </div>
-        </div>
-
-        <div class="poem">
-            <div class="poem-title" onclick="togglePoem('tulips')">Tulips</div>
-            <div id="tulips" class="poem-text">
-                The tulips are too excitable,<br>
-                It is winter here.<br>
-                Look how white<br>
-                Everything is,<br>
-                How quiet.<br><br>
-                The tulips are too excitable.<br>
-                The tulips are too red.<br>
-                The feverish orbs,<br>
-                In my mother’s vase,<br>
-                Are too lively.<br><br>
-                I lie in a stupor.<br>
-                I am the glue<br>
-                That holds the bones together.<br>
-                The bones are heavy.<br><br>
-                I am heavy with the tulips.<br>
-                The tulips are not dead.<br><br>
-                The tulips are not dead.<br>
-                They are alive with blood.<br>
-                The tulips are not dead.<br>
-                The tulips are alive.<br><br>
-                I am not dead.<br>
-                I am alive with blood.<br>
-                I am the living one,<br>
-                The tulips are alive,<br>
-                They are not dead.<br><br>
-                I am the only one<br>
-                Alive with blood,<br>
-                The tulips are not dead,<br>
-                I am the living one.
-            </div>
-            <div class="poem-description">
-                "Tulips" is a vivid and haunting portrayal of the speaker’s experience with illness and recovery. Sylvia Plath uses the imagery of tulips to symbolize the intrusion of life and vitality into a sterile and controlled environment. The poem conveys a sense of overwhelming presence and vitality that disrupts the speaker’s desired state of numbness and isolation, ultimately reflecting on themes of healing and the struggle to reconcile with one’s own existence.
-            </div>
-        </div>
-
-        <div class="poem">
-            <div class="poem-title" onclick="togglePoem('daddy')">Daddy</div>
-            <div id="daddy" class="poem-text">
-                You do not do, you do not do<br>
-                Any more, black shoe<br>
-                In which I have lived like a foot<br>
-                For thirty years, poor and white<br>
-                Barely daring to breathe or Achoo.<br><br>
-                Daddy, I have had to kill you.<br>
-                You died before I had time—<br>
-                Marble-heavy, a bag full of God,<br>
-                Ghastly statue with a man in it<br>
-                . . . .<br><br>
-                But they’re in my life,<br>
-                It’s such a lovely thing.<br><br>
-                Your father is my friend.<br>
-                We are friends now.<br>
-                I’ve learned that death<br>
-                Is a part of living.<br>
-                And that even after death<br>
-                There is love.<br>
-                Oh, Daddy,<br>
-                It’s such a lovely thing.<br><br>
-                You died before I had time—<br>
-                . . . .
-            </div>
-            <div class="poem-description">
-                "Daddy" is one of Sylvia Plath's most intense and controversial poems. It addresses the speaker's complex feelings toward her father, blending personal anguish with historical and cultural references. Plath’s use of stark, powerful imagery and emotional extremes creates a vivid portrayal of the speaker’s struggle with her past and her attempt to exorcize the lingering influence of her father’s memory. The poem reflects themes of oppression, trauma, and the search for resolution.
-            </div>
-        </div>
-
-        <div class="poem">
-            <div class="poem-title" onclick="togglePoem('theBellJar')">The Bell Jar</div>
-            <div id="theBellJar" class="poem-text">
-                I was supposed to be in it.<br>
-                I wanted to escape<br>
-                But there was no escape.<br>
-                I had to be a part of it,<br>
-                The Bell Jar,<br>
-                In which I was suffocated.<br><br>
-                I wanted to be free,<br>
-                But freedom was a cage.<br>
-                I could not escape<br>
-                The Bell Jar's confinement.<br><br>
-                I was trapped in the glass<br>
-                With no way out,<br>
-                And I was suffocating.<br>
-                I could not breathe<br>
-                And I could not escape.<br><br>
-                The Bell Jar was my life,<br>
-                And my life was trapped.<br>
-                I could not escape<br>
-                The Bell Jar's embrace.<br>
-                I was suffocating.<br>
-                I was trapped.<br><br>
-                The Bell Jar was my world,<br>
-                And I was its prisoner.<br>
-                I could not escape<br>
-                The Bell Jar's hold.<br>
-                I was suffocating.<br>
-                I was trapped.
-            </div>
-            <div class="poem-description">
-                "The Bell Jar" is a poignant exploration of mental illness and personal confinement. The poem uses the metaphor of a bell jar to symbolize the speaker’s feelings of entrapment and suffocation. Plath’s vivid imagery and emotive language reflect the struggles of coping with internal and external pressures, capturing a profound sense of isolation and the search for freedom from one's own psychological struggles.
+                "Morning Song" celebrates the arrival of a new baby and the transformative power of new life. Through vivid imagery and metaphors, Plath captures the wonder and adjustment of becoming a mother, reflecting on the changes brought about by the newborn’s presence.
             </div>
         </div>
     </div>
-    
     <footer>
-        <p>&copy; 2024 Sylvia Plath Webpage. All rights reserved.</p>
+        <p>&copy; 2024 Sylvia Plath Poetry. All rights reserved.</p>
     </footer>
 </body>
 </html>
