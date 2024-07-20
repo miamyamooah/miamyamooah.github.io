@@ -75,7 +75,6 @@
             text-align: left;
             max-width: 800px;
             width: 100%;
-            position: relative;
         }
         .poem-title {
             font-size: 1.2em;
@@ -83,22 +82,35 @@
             color: darkblue;
             cursor: pointer;
             margin-bottom: 10px;
+            position: relative;
+        }
+        .poem-title::after {
+            content: '\25BC'; 
+            font-size: 1.2em;
+            color: darkblue;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: transform 0.3s ease;
         }
         .poem-text {
             display: none;
             font-size: 1em;
             line-height: 1.6;
-            margin-top: 10px;
         }
         .poem-description {
             margin-top: 10px;
             font-size: 0.9em;
             color: #666;
+            text-align: center;
             border: 1px dotted #666;
             padding: 10px;
-            text-align: center;
-            display: inline-block;
-            max-width: 100%;
+        }
+        .poem.expanded .poem-text {
+            display: block;
+        }
+        .poem.expanded .poem-title::after {
+            content: '\25B2'; 
         }
         footer {
             background-color: #f1f1f1;
@@ -108,9 +120,14 @@
         }
     </style>
     <script>
-        function togglePoem(poemId) {
-            const poem = document.getElementById(poemId);
-            poem.style.display = poem.style.display === 'none' ? 'block' : 'none';
+        function togglePoem(id) {
+            var poemElement = document.getElementById(id).parentElement;
+            var poemText = document.getElementById(id);
+            if (poemElement.classList.contains('expanded')) {
+                poemElement.classList.remove('expanded');
+            } else {
+                poemElement.classList.add('expanded');
+            }
         }
     </script>
 </head>
@@ -207,43 +224,27 @@
                 I rocked shut<br>
                 As a seashell.<br><br>
                 They had to call and call<br>
-                And pick the worms off me like sticky pearls.<br><br>
-                Dying<br>
-                Is an art, like everything else.<br>
-                I do it exceptionally well.<br><br>
-                I do it so it feels like hell.<br>
-                I do it so it feels real.<br>
-                I guess you could say I've a call.<br><br>
-                It's easy enough to do it in a cell.<br>
-                It's easy enough to do it and stay put.<br>
-                It's the theatrical<br>
-                Comeback in broad day<br><br>
-                To the same place, the same face, the same brute<br>
-                Amused shout:<br><
-                The theatrical<br>
-                Comeback in broad day<br>
-                To the same place, the same face, the same brute<br>
-                Amused shout:<br><br>
-                "A miracle!"<br>
-                "That’s what you are!"<br><br>
-                The lost, the laughter, the glee,<br>
-                The pride of this city.<br><br>
-                Every time I resurrect, I move closer to the sun.<br>
-                I burn myself.<br>
-                But it doesn’t matter to me.<br><br>
-                So don’t worry.<br>
-                It’s all for you.<br>
-                I am in my element.<br>
-                So you can go on.<br><br>
-                You are just a memory of the earth.<br>
-                A cloud in my wake.<br>
-                And soon, soon,<br>
-                I will be nothing but a floating specter.<br><br>
-                Take it, take it all away,<br>
-                From the murky mists of the sea,<br>
-                The earth itself, my body, my life.<br>
-                Take it all away,<br>
-                To be free, to be pure.
+                And pick the wormy fruit.<br><br>
+                The third time I was angry.<br>
+                The cakes of soap<br>
+                The tea leaves<br>
+                And the bloody hands<br>
+                Were worth it.<br><br>
+                The gods are with me.<br>
+                The gods are alive.<br>
+                They have given me what I want,<br>
+                And I am the only one<br>
+                Who can feel.<br><br>
+                To the members of the jury<br>
+                Let me tell you something<br>
+                I have always been a working woman.<br><br>
+                The fire is almost out.<br>
+                The old lie has worn thin.<br>
+                We are all walking miracles.<br><br>
+                To each of us a different gift.<br>
+                For me, it is this:<br>
+                This life, this accident, this sacred thing.<br><br>
+                And I am proud to be a part of it.
             </div>
             <div class="poem-description">
                 "Lady Lazarus" is a powerful poem that delves into themes of resurrection, defiance, and identity. Plath uses the metaphor of Lazarus, the biblical figure who rose from the dead, to convey the speaker's experience of repeatedly overcoming adversity. The poem's tone oscillates between darkly triumphant and starkly confronting, reflecting the speaker's struggle and resilience. Plath’s vivid and provocative imagery underscores the intensity of the speaker’s struggle with personal and societal expectations.
