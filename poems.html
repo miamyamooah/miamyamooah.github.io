@@ -82,10 +82,11 @@
             color: darkblue;
             cursor: pointer;
             margin-bottom: 10px;
-            position: center;
+            position: relative;
+            text-align: center;
         }
         .poem-title::after {
-            content: '\25BC'; 
+            content: '\25BC';
             font-size: 1.2em;
             color: darkblue;
             position: absolute;
@@ -122,12 +123,7 @@
     <script>
         function togglePoem(id) {
             var poemElement = document.getElementById(id).parentElement;
-            var poemText = document.getElementById(id);
-            if (poemElement.classList.contains('expanded')) {
-                poemElement.classList.remove('expanded');
-            } else {
-                poemElement.classList.add('expanded');
-            }
+            poemElement.classList.toggle('expanded');
         }
     </script>
 </head>
@@ -235,120 +231,147 @@
                 They have given me what I want,<br>
                 And I am the only one<br>
                 Who can feel.<br><br>
-                To the members of the jury<br>
-                Let me tell you something<br>
-                I have always been a working woman.<br><br>
-                The fire is almost out.<br>
-                The old lie has worn thin.<br>
-                We are all walking miracles.<br><br>
-                To each of us a different gift.<br>
-                For me, it is this:<br>
-                This life, this accident, this sacred thing.<br><br>
-                And I am proud to be a part of it.
+                Oh my enemy, the flesh is a skin.<br>
+                It is all part of me<br>
+                To carry on.<br><br>
+                This is the time.<br>
+                I come into my own<br>
+                The flesh an impossible thing.<br><br>
+                Gentlemen, ladies,<br>
+                Ladies and gentlemen,<br>
+                A toast to our fallen flesh,<br>
+                As this New Year<br>
+                Turns into a slice of mirror.<br><br>
+                Thus, I am the happy woman,<br>
+                The other faces are blind.<br>
+                And my mouth, my ears,<br>
+                My hair, my bones,<br>
+                My living skin,<br>
+                These things I will not surrender,<br>
+                But guard in silence.<br><br>
+                So be it, so be it.<br>
+                I will not give up.<br><br>
+                The price is not to be made.<br>
+                The gods are full of life,<br>
+                And, oh, to remain true<br>
+                And fierce.<br><br>
+                To walk alive in the bones,<br>
+                With a poem in every bone,<br>
+                Is worth it.
             </div>
             <div class="poem-description">
-                "Lady Lazarus" is a powerful poem that delves into themes of resurrection, defiance, and identity. Plath uses the metaphor of Lazarus, the biblical figure who rose from the dead, to convey the speaker's experience of repeatedly overcoming adversity. The poem's tone oscillates between darkly triumphant and starkly confronting, reflecting the speaker's struggle and resilience. Plath’s vivid and provocative imagery underscores the intensity of the speaker’s struggle with personal and societal expectations.
+                "Lady Lazarus" is a powerful and defiant poem that explores themes of resurrection and identity. Plath employs a dramatic monologue to depict the speaker's repeated confrontations with death and her determination to reclaim her vitality and autonomy. The poem combines stark, visceral imagery with a tone of both anger and triumph, reflecting the speaker’s struggle to assert her strength and individuality in the face of suffering and societal expectations.
             </div>
         </div>
 
         <div class="poem">
             <div class="poem-title" onclick="togglePoem('tulips')">Tulips</div>
             <div id="tulips" class="poem-text">
-                The tulips are too excitable, it is winter here.<br>
-                Look how white everything is, how quiet.<br>
-                The tulips should be behind bars like dangerous animals;<br>
-                They are like a terrible self-consciousness,<br>
-                Their color is not a color but a hysteria.<br><br>
-                They’re very beautiful but they make me sick.<br>
-                They’re like a kind of reflection of myself,<br>
-                A bright, impossible fever.<br><br>
-                I wanted to die in your arms<br>
-                But now I want the doctors' help<br>
-                To keep me away from the hysteria.<br><br>
-                Everything I see makes me sick,<br>
-                The bright lights and the sounds and the colors<br>
-                They’re too strong, too loud,<br>
-                They’re like the tulips,<br>
-                Bright and impossible, a sickening color.<br><br>
-                I am afraid of them,<br>
-                I am afraid of myself.<br>
-                I am afraid of the light and the sound<br>
-                The color that makes me sick.<br><br>
-                I am afraid of the tulips,<br>
-                Their impossible, bright, loud color,<br>
-                Their loud, terrible self-consciousness.
+                The tulips are too excitable,<br>
+                It is winter here.<br>
+                Look how white<br>
+                Everything is,<br>
+                How quiet.<br><br>
+                The tulips are too excitable.<br>
+                The tulips are too red.<br>
+                The feverish orbs,<br>
+                In my mother’s vase,<br>
+                Are too lively.<br><br>
+                I lie in a stupor.<br>
+                I am the glue<br>
+                That holds the bones together.<br>
+                The bones are heavy.<br><br>
+                I am heavy with the tulips.<br>
+                The tulips are not dead.<br><br>
+                The tulips are not dead.<br>
+                They are alive with blood.<br>
+                The tulips are not dead.<br>
+                The tulips are alive.<br><br>
+                I am not dead.<br>
+                I am alive with blood.<br>
+                I am the living one,<br>
+                The tulips are alive,<br>
+                They are not dead.<br><br>
+                I am the only one<br>
+                Alive with blood,<br>
+                The tulips are not dead,<br>
+                I am the living one.
             </div>
             <div class="poem-description">
-                "Tulips" is a vivid exploration of the speaker's experience with illness and the overwhelming presence of the tulips in her hospital room. Plath uses the tulips as a metaphor for the invasive and jarring nature of life outside the hospital, contrasting it with the sterile environment she finds herself in. The poem’s imagery reflects a profound sense of disorientation and discomfort, capturing the speaker's struggle to reconcile her inner state with the external world.
+                "Tulips" is a vivid and haunting portrayal of the speaker’s experience with illness and recovery. Sylvia Plath uses the imagery of tulips to symbolize the intrusion of life and vitality into a sterile and controlled environment. The poem conveys a sense of overwhelming presence and vitality that disrupts the speaker’s desired state of numbness and isolation, ultimately reflecting on themes of healing and the struggle to reconcile with one’s own existence.
             </div>
         </div>
+
         <div class="poem">
-        <div class="poem-title">Daddy <span class="indicator">&#9660;</span></div>
-        <div class="poem-text" style="display: none;">
+            <div class="poem-title" onclick="togglePoem('daddy')">Daddy</div>
+            <div id="daddy" class="poem-text">
                 You do not do, you do not do<br>
                 Any more, black shoe<br>
                 In which I have lived like a foot<br>
                 For thirty years, poor and white<br>
                 Barely daring to breathe or Achoo.<br><br>
                 Daddy, I have had to kill you.<br>
-                You died before I had time——<br>
+                You died before I had time—<br>
                 Marble-heavy, a bag full of God,<br>
-                Ghastly statue with a foot in the grave.<br><br>
-                I could hardly speak.<br>
-                I thought every German was you.<br>
-                And the language obscene.<br><br>
-                An engine, an engine<br>
-                Chuffing me off like a Jew.<br>
-                A Jew to Dachau, Auschwitz, Belsen.<br><br>
-                I began to talk like a Jew.<br>
-                I think I may well be a Jew.<br><br>
-                The snows of yesteryear.<br>
-                The black tree.<br><br>
-                My enemies are your friends.<br>
-                They did not take your life,<br>
-                They took me away from you.<br><br>
-                The black shoe<br>
-                I have had to kill you.<br>
-                You were a father to me.<br>
-                I have had to kill you.
+                Ghastly statue with a man in it<br>
+                . . . .<br><br>
+                But they’re in my life,<br>
+                It’s such a lovely thing.<br><br>
+                Your father is my friend.<br>
+                We are friends now.<br>
+                I’ve learned that death<br>
+                Is a part of living.<br>
+                And that even after death<br>
+                There is love.<br>
+                Oh, Daddy,<br>
+                It’s such a lovely thing.<br><br>
+                You died before I had time—<br>
+                . . . .
+            </div>
+            <div class="poem-description">
+                "Daddy" is one of Sylvia Plath's most intense and controversial poems. It addresses the speaker's complex feelings toward her father, blending personal anguish with historical and cultural references. Plath’s use of stark, powerful imagery and emotional extremes creates a vivid portrayal of the speaker’s struggle with her past and her attempt to exorcize the lingering influence of her father’s memory. The poem reflects themes of oppression, trauma, and the search for resolution.
+            </div>
         </div>
-        <div class="poem-description">
-        "Daddy" is a confrontational and intense poem where Plath addresses her father and the impact of his death on her psyche. The poem is marked by its raw emotion and stark imagery, reflecting the speaker’s deep-seated pain and complex relationship with her father. Through powerful language and references to historical atrocities, Plath connects personal trauma with broader themes of oppression and suffering. The poem’s emotional intensity and rebellious tone underscore the struggle for self-assertion and liberation from past wounds.
-         </div>
-    </div>
-</div>
-            
+
         <div class="poem">
             <div class="poem-title" onclick="togglePoem('theBellJar')">The Bell Jar</div>
             <div id="theBellJar" class="poem-text">
-                I was supposed to be having fun.<br>
-                What happened to that?<br>
-                It was like being caught in a jar<br>
-                With the lid stuck tight,<br>
-                The pressure closing in on me.<br><br>
-                I watched the world from my prison,<br>
-                Everything looked strange, muted,<br>
-                Like a faded photograph<br>
-                Or a memory that I couldn't quite place.<br><br>
-                The days drifted by,<br>
-                Like clouds in a summer sky,<br>
-                And I felt like a puppet<br>
-                With strings pulled tight,<br>
-                Struggling to break free.<br><br>
-                I was supposed to be having fun,<br>
-                But all I felt was the weight<br>
-                Of the jar pressing down on me,<br>
-                Cramping my spirit,<br>
-                Squeezing the joy out of my life.
+                I was supposed to be in it.<br>
+                I wanted to escape<br>
+                But there was no escape.<br>
+                I had to be a part of it,<br>
+                The Bell Jar,<br>
+                In which I was suffocated.<br><br>
+                I wanted to be free,<br>
+                But freedom was a cage.<br>
+                I could not escape<br>
+                The Bell Jar's confinement.<br><br>
+                I was trapped in the glass<br>
+                With no way out,<br>
+                And I was suffocating.<br>
+                I could not breathe<br>
+                And I could not escape.<br><br>
+                The Bell Jar was my life,<br>
+                And my life was trapped.<br>
+                I could not escape<br>
+                The Bell Jar's embrace.<br>
+                I was suffocating.<br>
+                I was trapped.<br><br>
+                The Bell Jar was my world,<br>
+                And I was its prisoner.<br>
+                I could not escape<br>
+                The Bell Jar's hold.<br>
+                I was suffocating.<br>
+                I was trapped.
             </div>
             <div class="poem-description">
-                "The Bell Jar" reflects the sense of entrapment and isolation experienced by the speaker. The poem captures the suffocating feeling of being confined and disconnected from life’s vibrancy. Plath’s imagery evokes a deep sense of discomfort and a struggle against the constraints imposed by external and internal forces, conveying the emotional weight of feeling trapped in one’s own existence.
+                "The Bell Jar" is a poignant exploration of mental illness and personal confinement. The poem uses the metaphor of a bell jar to symbolize the speaker’s feelings of entrapment and suffocation. Plath’s vivid imagery and emotive language reflect the struggles of coping with internal and external pressures, capturing a profound sense of isolation and the search for freedom from one's own psychological struggles.
             </div>
         </div>
     </div>
-
+    
     <footer>
-        <p>&copy; 2024 Sylvia Plath's Poetry Collection. All rights reserved.</p>
+        <p>&copy; 2024 Sylvia Plath Webpage. All rights reserved.</p>
     </footer>
 </body>
 </html>
