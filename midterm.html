@@ -13,22 +13,25 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            color: #333; 
+            color: #333;
+            background-color: #f9f9f9;
         }
         header {
-            background-color: darkblue;
-            color: white;
+            background-color: #003366;
+            color: #fff;
             text-align: center;
             padding: 20px 0;
         }
-        h1 {
+        header h1 {
             font-style: italic;
-            color: lightblue;
+            color: #99ccff;
             margin: 0;
         }
+        header p {
+            margin: 5px 0 0 0;
+        }
         nav {
-            background-color: lightblue;
-            overflow: hidden;
+            background-color: #99ccff;
             padding: 10px 0;
         }
         nav ul {
@@ -39,46 +42,82 @@
             justify-content: center;
         }
         nav ul li {
-            display: inline;
-            margin-right: 10px;
+            margin: 0 10px;
         }
         nav ul li a {
-            color: darkblue; 
+            color: #003366;
             text-decoration: none;
             padding: 10px;
+            display: block;
         }
         nav ul li a:hover {
             background-color: #ddd;
         }
         .main-content {
+            padding: 20px;
+            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
         }
         .blue-box {
-            background-color: lightblue;
+            background-color: #99ccff;
             padding: 20px;
-            margin: 10px 0;
+            margin: 20px 0;
             border-radius: 5px;
             max-width: 800px;
             width: 100%;
-            color: darkblue; 
+            color: #003366;
         }
         .image-container {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px 0;
         }
         .image-container img {
-            max-width: 50%;
+            max-width: 100%;
             height: auto;
             border-radius: 5px;
         }
+        h2 {
+            margin-top: 0;
+        }
+        .section-content {
+            line-height: 1.6;
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; 
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
         footer {
-            background-color: #f1f1f1;
+            background-color: #003366;
+            color: #fff;
             text-align: center;
             padding: 10px;
-            margin-top: auto;
+        }
+        footer a {
+            color: #99ccff;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -90,40 +129,67 @@
     
     <nav>
         <ul>
-            <li><a href="https://miamyamooah.github.io/midterm.html">Silvia's Legacy</a></li>
+            <li><a href="https://miamyamooah.github.io/midterm.html">Sylvia's Legacy</a></li>
             <li><a href="https://miamyamooah.github.io/thefigtree.html">The Fig Tree</a></li>
-             <li><a href="https://miamyamooah.github.io/poems.html">Sylvia's Poetry</a></li>
+            <li><a href="https://miamyamooah.github.io/poems.html">Sylvia's Poetry</a></li>
             <li><a href="https://miamyamooah.github.io/discussion.html">Discussion</a></li>
             <li><a href="https://miamyamooah.github.io/moreinformation!.html">More Stuff!</a></li>
         </ul>
     </nav>
     
-    <div class="main-content">
+    <main class="main-content">
         <div class="image-container">
             <img src="https://media.poetryfoundation.org/uploads/media/default/0001/16/9335c30d45c8a838017ed7508083bc341aa50e73.jpeg" alt="Sylvia Plath">
         </div>
         
         <section id="overview" class="blue-box">
             <h2>Overview of Sylvia Plath's Works</h2>
-            <p>Sylvia Plath's literary works encompass poetry, novels, and journals that explore profound themes such as mental health, feminism, and personal identity. Her writing style is characterized by its lyrical intensity and vivid imagery. Plath's ability to blend personal experiences with universal themes has earned her a lasting place in literary history, influencing readers and writers alike with her poignant explorations of human emotions and societal expectations.</p>
-            <p>Exploring Plath's body of work reveals a writer deeply engaged with the complexities of the human psyche, using language that is both evocative and precise. Her poems, such as "Ariel" and "Lady Lazarus," continue to resonate for their raw honesty and exploration of themes like death, rebirth, and the struggle for autonomy. Through her novels, particularly <em>The Bell Jar</em>, Plath challenges conventional narratives about mental illness and gender roles, offering readers a nuanced portrayal of personal turmoil and societal pressures.</p>
-            <p>Plath's legacy extends beyond her literary achievements to her impact on contemporary culture, inspiring discussions on mental health awareness, feminism, and the role of women in society. By adding Sylvia Plath to your reading list, you embark on a journey into the depths of human experience, guided by a writer whose voice remains as relevant today as it was during her lifetime.</p>
+            <div class="section-content">
+                <p>Sylvia Plath's literary works encompass poetry, novels, and journals that explore profound themes such as mental health, feminism, and personal identity. Her writing style is characterized by its lyrical intensity and vivid imagery. Plath's ability to blend personal experiences with universal themes has earned her a lasting place in literary history, influencing readers and writers alike with her poignant explorations of human emotions and societal expectations.</p>
+                <ul>
+                    <li>**Poems:**
+                        <ul>
+                            <li>"Ariel"</li>
+                            <li>"Lady Lazarus"</li>
+                        </ul>
+                    </li>
+                    <li>**Novels:**
+                        <ul>
+                            <li><em>The Bell Jar</em></li>
+                        </ul>
+                    </li>
+                    <li>**Journals:** Personal insights and reflections</li>
+                </ul>
+                <p>Plath's legacy extends beyond her literary achievements to her impact on contemporary culture, inspiring discussions on mental health awareness, feminism, and the role of women in society. By adding Sylvia Plath to your reading list, you embark on a journey into the depths of human experience, guided by a writer whose voice remains as relevant today as it was during her lifetime.</p>
+            </div>
         </section>
 
         <section id="the-bell-jar" class="blue-box">
             <h2>The Bell Jar</h2>
-            <p>Sylvia Plath’s novel, <em>The Bell Jar</em>, remains a seminal work in feminist literature and a powerful critique of societal expectations placed on women. The protagonist, Esther Greenwood, navigates a world where women face limited choices and stifling societal pressures, struggling to find her own identity amidst conflicting expectations.</p>
-            <p>Plath's portrayal of Esther's mental health journey is both intimate and unflinching, shedding light on the complexities of depression and the stigma surrounding mental illness. Through Esther's narrative, Plath challenges readers to reconsider traditional notions of sanity and madness, offering a poignant commentary on the often isolating experience of mental health struggles.</p>
-            <p>By examining themes such as identity, sexuality, and the quest for authenticity, <em>The Bell Jar</em> invites readers to reflect on their own lives and societal expectations. Plath's novel continues to resonate for its timeless exploration of human vulnerability and the enduring quest for self-discovery.</p>
+            <div class="section-content">
+                <p>Sylvia Plath’s novel, <em>The Bell Jar</em>, remains a seminal work in feminist literature and a powerful critique of societal expectations placed on women. The protagonist, Esther Greenwood, navigates a world where women face limited choices and stifling societal pressures, struggling to find her own identity amidst conflicting expectations.</p>
+                <p>Plath's portrayal of Esther's mental health journey is both intimate and unflinching, shedding light on the complexities of depression and the stigma surrounding mental illness. Through Esther's narrative, Plath challenges readers to reconsider traditional notions of sanity and madness, offering a poignant commentary on the often isolating experience of mental health struggles.</p>
+                <p>By examining themes such as identity, sexuality, and the quest for authenticity, <em>The Bell Jar</em> invites readers to reflect on their own lives and societal expectations. Plath's novel continues to resonate for its timeless exploration of human vulnerability and the enduring quest for self-discovery.</p>
+            </div>
         </section>
 
         <section id="reflection-dialogue" class="blue-box">
             <h2>Invitation to Personal Reflection and Dialogue</h2>
-            <p>Reading Sylvia Plath is not merely an act of literary engagement but also an invitation to introspection and dialogue. Her works provoke deep personal reflection on themes of suffering, resilience, and the pursuit of authenticity. Engaging with Plath's writings sparks meaningful conversations about mental health awareness, gender equality, and the enduring power of literature to illuminate the human experience.</p>
-            <p>Whether exploring her poetry or novels, readers are encouraged to confront complex emotions and societal norms through Plath's unfiltered perspective. Themes like existential crisis, identity formation, and the struggle for autonomy resonate across her body of work, inviting readers to examine their own lives and perspectives.</p>
-            <p>Plath's legacy as a writer extends beyond her tragic life story to the profound impact of her words on subsequent generations. By adding Sylvia Plath to your reading list, you embark on a journey of self-discovery and intellectual growth, guided by a writer whose insights into the human condition continue to captivate and inspire.</p>
+            <div class="section-content">
+                <p>Reading Sylvia Plath is not merely an act of literary engagement but also an invitation to introspection and dialogue. Her works provoke deep personal reflection on themes of suffering, resilience, and the pursuit of authenticity. Engaging with Plath's writings sparks meaningful conversations about mental health awareness, gender equality, and the enduring power of literature to illuminate the human experience.</p>
+                <ul>
+                    <li>**Themes:**
+                        <ul>
+                            <li>Existential crisis</li>
+                            <li>Identity formation</li>
+                            <li>Struggle for autonomy</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>Plath's legacy as a writer extends beyond her tragic life story to the profound impact of her words on subsequent generations. By adding Sylvia Plath to your reading list, you embark on a journey of self-discovery and intellectual growth, guided by a writer whose insights into the human condition continue to captivate and inspire.</p>
+            </div>
         </section>
-    </div>
+    </main>
 
     <footer>
         <p>&copy; 2024 Mariah McHale. All rights reserved.</p>
