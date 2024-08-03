@@ -100,6 +100,23 @@
             padding: 10px;
             margin-top: auto;
         }
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: darkblue;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-align: center;
+            display: none; 
+            text-decoration: none;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .back-to-top:hover {
+            background-color: navy;
+        }
     </style>
     <script>
         function togglePoem(id) {
@@ -525,5 +542,22 @@
     <footer>
         <p>&copy; 2024 Sylvia Plath Poetry. All rights reserved.</p>
     </footer>
+    <a href="#" class="back-to-top" id="backToTopBtn">Back to Top</a>
+    <script>
+    window.onscroll = function() {
+        var button = document.getElementById('backToTopBtn');
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+
+    // Smooth scroll back to top when the button is clicked
+    document.getElementById('backToTopBtn').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    </script>
 </body>
 </html>
