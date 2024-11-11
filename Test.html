@@ -3,148 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentor Responsibility Scenarios</title>
+    <title>Mentor Scenarios</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            padding: 20px;
-        }
         .scenario {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             margin-bottom: 20px;
         }
         .options {
-            list-style-type: none;
+            list-style: none;
             padding: 0;
         }
         .options li {
             margin-bottom: 10px;
         }
+        .reflection {
+            display: none;
+            margin-top: 10px;
+            font-style: italic;
+        }
         .btn {
+            padding: 10px;
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
         }
         .btn:hover {
             background-color: #45a049;
         }
-        .reflection {
-            display: none;
-            margin-top: 20px;
-            font-style: italic;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Scenario 1: Raising Student Voice -->
+    <h2>Mentor Scenarios</h2>
+
+    <!-- Scenario 1: Building Trust -->
     <div class="scenario">
-        <h3>Scenario 1: Raising Student Voice</h3>
-        <p>You are working with a student who is shy and often hesitates to speak up in group discussions. During a class project, the student has a brilliant idea, but the group is not listening to them.</p>
-        
+        <h3>Scenario 1: Building Trust</h3>
+        <p>A student in your class has been consistently disruptive and appears to have little trust in authority figures.</p>
+
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('A')">A) Step in and present the student’s idea to the group for them.</button></li>
-            <li><button class="btn" onclick="showReflection('B')">B) Encourage the student to share their idea by validating their voice and offering support.</button></li>
-            <li><button class="btn" onclick="showReflection('C')">C) Ignore the student’s hesitation and continue with the group discussion.</button></li>
+            <li><button class="btn" onclick="showReflection('A')">A) Take a firm stance and enforce strict rules immediately.</button></li>
+            <li><button class="btn" onclick="showReflection('B')">B) Build rapport with the student through one-on-one conversations and setting mutual expectations.</button></li>
+            <li><button class="btn" onclick="showReflection('C')">C) Ignore the behavior, hoping it will improve on its own.</button></li>
         </ul>
 
         <div id="reflectionA" class="reflection">
-            <p><strong>Reflection:</strong> Why is option A not the best choice? What impact does stepping in for the student have on their confidence?</p>
+            <p><strong>Reflection:</strong> Why is option A not a good approach? How can this approach damage trust between mentor and student?</p>
         </div>
         <div id="reflectionB" class="reflection">
-            <p><strong>Reflection:</strong> Why was option B the best choice? What impact does validating the student's voice have on their confidence and sense of belonging?</p>
+            <p><strong>Reflection:</strong> Why was option B the best approach? How does building trust help improve behavior and communication?</p>
         </div>
         <div id="reflectionC" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C not effective? How does ignoring the student's voice affect their engagement and growth?</p>
+            <p><strong>Reflection:</strong> Why is option C ineffective? How does ignoring the problem fail to address the root cause?</p>
         </div>
     </div>
 
-    <!-- Scenario 2: Inviting Multi-Generational Learning -->
+    <!-- Scenario 2: Encouraging Growth Mindset -->
     <div class="scenario">
-        <h3>Scenario 2: Inviting Multi-Generational Learning</h3>
-        <p>A student in your group is struggling to grasp a science concept. You have a colleague who is an expert in this topic and has agreed to come in to help.</p>
+        <h3>Scenario 2: Encouraging Growth Mindset</h3>
+        <p>A student struggles with math and has begun saying they are "just not good at it" after failing a test.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('D')">A) Invite the colleague to share their knowledge with the student and the group.</button></li>
-            <li><button class="btn" onclick="showReflection('E')">B) Instead of involving the colleague, try to solve the problem yourself, even though you’re not as familiar with the topic.</button></li>
-            <li><button class="btn" onclick="showReflection('F')">C) Tell the student to look up the information online and figure it out on their own.</button></li>
+            <li><button class="btn" onclick="showReflection('D')">A) Tell the student that they can get better with practice and offer extra assignments.</button></li>
+            <li><button class="btn" onclick="showReflection('E')">B) Provide a clear path of improvement by breaking tasks down into smaller steps and praising effort over results.</button></li>
+            <li><button class="btn" onclick="showReflection('F')">C) Encourage the student to focus on other subjects where they excel.</button></li>
         </ul>
 
         <div id="reflectionD" class="reflection">
-            <p><strong>Reflection:</strong> Why was option A the most effective approach? How can bringing in a multi-generational perspective enrich the student’s learning experience?</p>
+            <p><strong>Reflection:</strong> Why is option A insufficient? How does simply offering more work miss the opportunity to foster a growth mindset?</p>
         </div>
         <div id="reflectionE" class="reflection">
-            <p><strong>Reflection:</strong> Why was option B not a good choice? How does not involving the colleague affect the student’s learning?</p>
+            <p><strong>Reflection:</strong> Why was option B the best choice? How does focusing on effort rather than innate ability promote a growth mindset?</p>
         </div>
         <div id="reflectionF" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C ineffective? How does telling the student to figure it out alone hinder their learning?</p>
+            <p><strong>Reflection:</strong> Why is option C not helpful? How does avoiding challenges inhibit learning and growth?</p>
         </div>
     </div>
 
-    <!-- Scenario 3: Eliciting Diverse Sense Making & Ways of Knowing -->
+    <!-- Scenario 3: Providing Constructive Feedback -->
     <div class="scenario">
-        <h3>Scenario 3: Eliciting Diverse Sense Making & Ways of Knowing</h3>
-        <p>You are working with a student who is very hands-on and learns best by creating models and physical representations. In contrast, the rest of the class is using traditional note-taking methods.</p>
+        <h3>Scenario 3: Providing Constructive Feedback</h3>
+        <p>A student submits an assignment with several mistakes but has worked hard on it.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('G')">A) Encourage the student to stick with the class and use the same method as everyone else.</button></li>
-            <li><button class="btn" onclick="showReflection('H')">B) Validate the student's preferred learning style and let them express their ideas in a hands-on way, while also encouraging other students to share their methods.</button></li>
-            <li><button class="btn" onclick="showReflection('I')">C) Tell the student their method is too time-consuming and force them to follow the traditional approach.</button></li>
+            <li><button class="btn" onclick="showReflection('G')">A) Point out all the mistakes and offer suggestions for improvement.</button></li>
+            <li><button class="btn" onclick="showReflection('H')">B) Focus on the positives first, then gently offer suggestions for improvement in a constructive way.</button></li>
+            <li><button class="btn" onclick="showReflection('I')">C) Tell the student their effort is appreciated but avoid addressing the mistakes.</button></li>
         </ul>
 
         <div id="reflectionG" class="reflection">
-            <p><strong>Reflection:</strong> Why is option A not a good approach? How can adhering to a single method limit the student’s potential?</p>
+            <p><strong>Reflection:</strong> Why is option A too harsh? How can pointing out mistakes without encouragement harm motivation?</p>
         </div>
         <div id="reflectionH" class="reflection">
-            <p><strong>Reflection:</strong> Why is option B the best choice? How does validating diverse ways of knowing benefit all students?</p>
+            <p><strong>Reflection:</strong> Why was option B the best approach? How does offering constructive feedback alongside positive reinforcement help students grow?</p>
         </div>
         <div id="reflectionI" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C not an effective choice? How does ignoring the student's preferred learning style impact their motivation?</p>
+            <p><strong>Reflection:</strong> Why is option C insufficient? How can avoiding necessary corrections hinder the student’s learning process?</p>
         </div>
     </div>
 
-    <!-- Scenario 4: Engaging in Place-Based Learning -->
+    <!-- Scenario 4: Supporting Emotional Well-Being -->
     <div class="scenario">
-        <h3>Scenario 4: Engaging in Place-Based Learning</h3>
-        <p>Your class is about to start a new project focused on local environmental issues. A student suggests incorporating a local historical site into the project.</p>
+        <h3>Scenario 4: Supporting Emotional Well-Being</h3>
+        <p>A student seems upset and distracted during class, but they haven't shared what’s bothering them.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('J')">A) Dismiss the suggestion and stick to the original plan, focusing only on scientific aspects.</button></li>
-            <li><button class="btn" onclick="showReflection('K')">B) Encourage the student to research and integrate the historical site into the project, fostering connections between history, science, and the community.</button></li>
-            <li><button class="btn" onclick="showReflection('L')">C) Limit the project to the students' classroom research without considering real-world connections.</button></li>
+            <li><button class="btn" onclick="showReflection('J')">A) Ignore the student's behavior and focus on continuing the lesson.</button></li>
+            <li><button class="btn" onclick="showReflection('K')">B) Take a moment to privately check in with the student and offer support.</button></li>
+            <li><button class="btn" onclick="showReflection('L')">C) Tell the student to focus on the lesson and save personal matters for later.</button></li>
         </ul>
 
         <div id="reflectionJ" class="reflection">
-            <p><strong>Reflection:</strong> Why is option A not effective? How does ignoring place-based learning limit students' understanding of their community?</p>
+            <p><strong>Reflection:</strong> Why is option A not helpful? How does ignoring the student's emotional needs impact their engagement and well-being?</p>
         </div>
         <div id="reflectionK" class="reflection">
-            <p><strong>Reflection:</strong> Why was option B the most effective choice? How does connecting students to the community improve their learning?</p>
+            <p><strong>Reflection:</strong> Why was option B the best approach? How does checking in with the student show care and help them focus better?</p>
         </div>
         <div id="reflectionL" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C not a good choice? How does not engaging with the real world affect student relevance and learning?</p>
+            <p><strong>Reflection:</strong> Why is option C ineffective? How can telling the student to save personal matters for later create feelings of isolation?</p>
         </div>
     </div>
 
-    <!-- Scenario 5: Unpacking the Community as a System -->
+    <!-- Scenario 5: Addressing Community Systems -->
     <div class="scenario">
-        <h3>Scenario 5: Unpacking the Community as a System</h3>
-        <p>During a community project, a student raises a concern about local pollution. They suggest that everyone should be aware of the larger systems that cause this issue.</p>
+        <h3>Scenario 5: Addressing Community Systems</h3>
+        <p>A student’s behavior is frequently disruptive, and it’s clear that home life might be affecting their performance in class.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('M')">A) Ignore the student’s concerns and keep the project focused on smaller, individual actions.</button></li>
-            <li><button class="btn" onclick="showReflection('N')">B) Help the student explore the issue by examining the broader systems at play, and guide them to see how their actions can make an impact.</button></li>
-            <li><button class="btn" onclick="showReflection('O')">C) Suggest the student look for answers in books, ignoring the community context.</button></li>
+            <li><button class="btn" onclick="showReflection('M')">A) Ignore the student’s home life and focus on their behavior in class.</button></li>
+            <li><button class="btn" onclick="showReflection('N')">B) Engage with the student’s family to better understand the situation and offer tailored support.</button></li>
+            <li><button class="btn" onclick="showReflection('O')">C) Discuss the student’s behavior with the class and ask for their suggestions on how to address it.</button></li>
         </ul>
 
         <div id="reflectionM" class="reflection">
@@ -166,63 +154,115 @@
         <ul class="options">
             <li><button class="btn" onclick="showReflection('P')">A) Reject the student’s idea because it doesn’t fit with the lesson plan.</button></li>
             <li><button class="btn" onclick="showReflection('Q')">B) Open up a discussion about the student’s idea and find a way to explore it while still covering the planned material.</button></li>
-            <li><button class="btn" onclick="showReflection('R')">C) Ignore the student's suggestion and continue with the lesson.</button></li>
+            <li><button class="btn" onclick="showReflection('R')">C) Allow the student to present their idea at the end of the class, but make it clear it’s not part of the lesson.</button></li>
         </ul>
 
         <div id="reflectionP" class="reflection">
-            <p><strong>Reflection:</strong> Why is option A limiting? How does rejecting students' ideas hinder inquiry and engagement?</p>
+            <p><strong>Reflection:</strong> Why is option A not a good approach? How does shutting down student ideas limit creativity and engagement?</p>
         </div>
         <div id="reflectionQ" class="reflection">
-            <p><strong>Reflection:</strong> Why was option B the best choice? How does engaging in shared inquiry promote deeper understanding?</p>
+            <p><strong>Reflection:</strong> Why was option B the best choice? How does fostering inquiry promote active learning and critical thinking?</p>
         </div>
         <div id="reflectionR" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C not effective? How does ignoring new ideas limit the potential for growth in the classroom?</p>
+            <p><strong>Reflection:</strong> Why is option C not the best? How does delaying the conversation undermine the value of students’ contributions?</p>
         </div>
     </div>
 
-    <!-- Scenario 7: Empowering Learners to Build Confidence -->
+    <!-- Scenario 7: Encouraging Collaboration -->
     <div class="scenario">
-        <h3>Scenario 7: Empowering Learners to Build Confidence</h3>
-        <p>A student consistently doubts their ability to succeed in math, despite doing well on assignments.</p>
+        <h3>Scenario 7: Encouraging Collaboration</h3>
+        <p>Two students are not working well together on a group project and seem to be avoiding each other.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('S')">A) Tell the student they are capable but leave it at that.</button></li>
-            <li><button class="btn" onclick="showReflection('T')">B) Help the student reflect on their strengths and success, offering them specific praise and actionable steps to build their confidence further.</button></li>
-            <li><button class="btn" onclick="showReflection('U')">C) Tell the student to keep practicing until they feel more confident.</button></li>
+            <li><button class="btn" onclick="showReflection('S')">A) Divide the group and assign them different tasks without consulting them.</button></li>
+            <li><button class="btn" onclick="showReflection('T')">B) Have a conversation with both students about the importance of teamwork and collaborate on finding a solution.</button></li>
+            <li><button class="btn" onclick="showReflection('U')">C) Allow the students to work separately and let them turn in individual projects.</button></li>
         </ul>
 
         <div id="reflectionS" class="reflection">
-            <p><strong>Reflection:</strong> Why is option A a missed opportunity? How does simply telling the student they are capable fall short?</p>
+            <p><strong>Reflection:</strong> Why is option A not the best choice? How does imposing a solution without considering the students' needs hinder collaboration?</p>
         </div>
         <div id="reflectionT" class="reflection">
-            <p><strong>Reflection:</strong> Why was option B the most empowering? How does providing specific praise and guidance contribute to building the student's confidence?</p>
+            <p><strong>Reflection:</strong> Why was option B the best approach? How does addressing teamwork issues together help foster collaboration?</p>
         </div>
         <div id="reflectionU" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C insufficient? How does telling the student to practice without guidance leave them feeling unsupported?</p>
+            <p><strong>Reflection:</strong> Why is option C ineffective? How does avoiding the issue prevent growth in communication skills?</p>
         </div>
     </div>
 
-    <!-- Scenario 8: Belonging through Relationships -->
+    <!-- Scenario 8: Managing Classroom Behavior -->
     <div class="scenario">
-        <h3>Scenario 8: Belonging through Relationships</h3>
-        <p>A new student joins your class mid-year and is struggling to make friends and feel comfortable.</p>
+        <h3>Scenario 8: Managing Classroom Behavior</h3>
+        <p>A student continually interrupts during lessons and distracts others.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('V')">A) Pair the student with a buddy and encourage group activities to help them fit in.</button></li>
-            <li><button class="btn" onclick="showReflection('W')">B) Ignore the student's struggle, assuming they’ll adjust eventually.</button></li>
-            <li><button class="btn" onclick="showReflection('X')">C) Tell the student to ask their classmates for help if they need it.</button></li>
+            <li><button class="btn" onclick="showReflection('V')">A) Remove the student from the classroom immediately.</button></li>
+            <li><button class="btn" onclick="showReflection('W')">B) Speak to the student privately to understand the reason for the behavior and work together on a solution.</button></li>
+            <li><button class="btn" onclick="showReflection('X')">C) Ignore the behavior and continue with the lesson, hoping the student will settle down.</button></li>
         </ul>
 
         <div id="reflectionV" class="reflection">
-            <p><strong>Reflection:</strong> Why was option A the best choice? How does fostering belonging through peer relationships enhance the student's experience?</p>
+            <p><strong>Reflection:</strong> Why is option A too harsh? How does removing the student immediately fail to address the root cause?</p>
         </div>
         <div id="reflectionW" class="reflection">
-            <p><strong>Reflection:</strong> Why is option B not effective? How does ignoring the student's social needs affect their engagement?</p>
+            <p><strong>Reflection:</strong> Why was option B the best approach? How does addressing behavior privately and collaboratively help improve it?</p>
         </div>
         <div id="reflectionX" class="reflection">
-            <p><strong>Reflection:</strong> Why is option C not the best approach? How can more proactive steps build stronger relationships?</p>
+            <p><strong>Reflection:</strong> Why is option C ineffective? How does ignoring disruptive behavior lead to further disengagement?</p>
         </div>
     </div>
+
+    <!-- Scenario 9: Handling Diverse Learning Styles -->
+    <div class="scenario">
+        <h3>Scenario 9: Handling Diverse Learning Styles</h3>
+        <p>A student is struggling to grasp the material and appears to need a different learning approach than the one being used.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('Y')">A) Stick to the current approach and expect the student to catch up.</button></li>
+            <li><button class="btn" onclick="showReflection('Z')">B) Tailor your teaching to accommodate the student’s unique learning style.</button></li>
+            <li><button class="btn" onclick="showReflection('AA')">C) Assign extra work without changing the teaching approach.</button></li>
+        </ul>
+
+        <div id="reflectionY" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A ineffective? How does refusing to adapt to the student's learning style inhibit progress?</p>
+        </div>
+        <div id="reflectionZ" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the best choice? How does adapting teaching methods help meet the diverse needs of students?</p>
+        </div>
+        <div id="reflectionAA" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C insufficient? How does giving extra work without adjusting teaching methods fail to address the root cause?</p>
+        </div>
+    </div>
+
+    <!-- Scenario 10: Encouraging Student Voice -->
+    <div class="scenario">
+        <h3>Scenario 10: Encouraging Student Voice</h3>
+        <p>A student has an idea for a class project but is hesitant to share it.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('BB')">A) Ignore the student’s idea and continue with the planned project.</button></li>
+            <li><button class="btn" onclick="showReflection('CC')">B) Encourage the student to share their idea and give them the space to lead the discussion.</button></li>
+            <li><button class="btn" onclick="showReflection('DD')">C) Ask the class if they agree with the student’s idea before letting them present it.</button></li>
+        </ul>
+
+        <div id="reflectionBB" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A dismissive? How does ignoring students’ contributions stifle their confidence and creativity?</p>
+        </div>
+        <div id="reflectionCC" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the best choice? How does encouraging student input promote ownership and engagement?</p>
+        </div>
+        <div id="reflectionDD" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not the best? How does putting the decision in the hands of the class undermine the student's voice?</p>
+        </div>
+    </div>
+
+    <script>
+        function showReflection(option) {
+            const reflections = document.querySelectorAll('.reflection');
+            reflections.forEach(reflection => reflection.style.display = 'none');
+            document.getElementById('reflection' + option).style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
