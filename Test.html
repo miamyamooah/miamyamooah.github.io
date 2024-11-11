@@ -53,9 +53,9 @@
         <p>You are working with a student who is shy and often hesitates to speak up in group discussions. During a class project, the student has a brilliant idea, but the group is not listening to them.</p>
         
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('optionA')">A) Step in and present the student’s idea to the group for them.</button></li>
-            <li><button class="btn" onclick="showReflection('optionB')">B) Encourage the student to share their idea by validating their voice and offering support.</button></li>
-            <li><button class="btn" onclick="showReflection('optionC')">C) Ignore the student’s hesitation and continue with the group discussion.</button></li>
+            <li><button class="btn" onclick="showReflection('A')">A) Step in and present the student’s idea to the group for them.</button></li>
+            <li><button class="btn" onclick="showReflection('B')">B) Encourage the student to share their idea by validating their voice and offering support.</button></li>
+            <li><button class="btn" onclick="showReflection('C')">C) Ignore the student’s hesitation and continue with the group discussion.</button></li>
         </ul>
 
         <div id="reflectionA" class="reflection">
@@ -74,9 +74,9 @@
         <p>A student in your group is struggling to grasp a science concept. You have a colleague who is an expert in this topic and has agreed to come in to help.</p>
 
         <ul class="options">
-            <li><button class="btn" onclick="showReflection('optionD')">A) Invite the colleague to share their knowledge with the student and the group.</button></li>
-            <li><button class="btn" onclick="showReflection('optionE')">B) Instead of involving the colleague, try to solve the problem yourself, even though you’re not as familiar with the topic.</button></li>
-            <li><button class="btn" onclick="showReflection('optionF')">C) Tell the student to look up the information online and figure it out on their own.</button></li>
+            <li><button class="btn" onclick="showReflection('D')">A) Invite the colleague to share their knowledge with the student and the group.</button></li>
+            <li><button class="btn" onclick="showReflection('E')">B) Instead of involving the colleague, try to solve the problem yourself, even though you’re not as familiar with the topic.</button></li>
+            <li><button class="btn" onclick="showReflection('F')">C) Tell the student to look up the information online and figure it out on their own.</button></li>
         </ul>
 
         <div id="reflectionD" class="reflection">
@@ -99,7 +99,10 @@
             });
 
             // Show the reflection based on the selected option
-            document.getElementById('reflection' + option.charAt(0).toUpperCase() + option.slice(1)).style.display = 'block';
+            var selectedReflection = document.getElementById('reflection' + option);
+            if (selectedReflection) {
+                selectedReflection.style.display = 'block';
+            }
         }
     </script>
 
