@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Responsibility Scenarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .scenario {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .options {
+            list-style-type: none;
+            padding: 0;
+        }
+        .options li {
+            margin-bottom: 10px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .reflection {
+            display: none;
+            margin-top: 20px;
+            font-style: italic;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="scenario">
+        <h3>Scenario 1: Raising Student Voice</h3>
+        <p>You are working with a student who is shy and often hesitates to speak up in group discussions. During a class project, the student has a brilliant idea, but the group is not listening to them.</p>
+        
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('optionA')">A) Step in and present the student’s idea to the group for them.</button></li>
+            <li><button class="btn" onclick="showReflection('optionB')">B) Encourage the student to share their idea by validating their voice and offering support.</button></li>
+            <li><button class="btn" onclick="showReflection('optionC')">C) Ignore the student’s hesitation and continue with the group discussion.</button></li>
+        </ul>
+
+        <div id="reflectionA" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A not the best choice? What impact does stepping in for the student have on their confidence?</p>
+        </div>
+        <div id="reflectionB" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the best choice? What impact does validating the student's voice have on their confidence and sense of belonging?</p>
+        </div>
+        <div id="reflectionC" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not effective? How does ignoring the student's voice affect their engagement and growth?</p>
+        </div>
+    </div>
+
+    <div class="scenario">
+        <h3>Scenario 2: Inviting Multi-Generational Learning</h3>
+        <p>A student in your group is struggling to grasp a science concept. You have a colleague who is an expert in this topic and has agreed to come in to help.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('optionD')">A) Invite the colleague to share their knowledge with the student and the group.</button></li>
+            <li><button class="btn" onclick="showReflection('optionE')">B) Instead of involving the colleague, try to solve the problem yourself, even though you’re not as familiar with the topic.</button></li>
+            <li><button class="btn" onclick="showReflection('optionF')">C) Tell the student to look up the information online and figure it out on their own.</button></li>
+        </ul>
+
+        <div id="reflectionD" class="reflection">
+            <p><strong>Reflection:</strong> Why was option A the most effective approach? How can bringing in a multi-generational perspective enrich the student’s learning experience?</p>
+        </div>
+        <div id="reflectionE" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B not a good choice? How does not involving the colleague affect the student’s learning?</p>
+        </div>
+        <div id="reflectionF" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C ineffective? How does telling the student to figure it out alone hinder their learning?</p>
+        </div>
+    </div>
+
+    <script>
+        function showReflection(option) {
+            // Hide all reflections first
+            var reflections = document.querySelectorAll('.reflection');
+            reflections.forEach(function(reflection) {
+                reflection.style.display = 'none';
+            });
+
+            // Show the reflection based on the selected option
+            document.getElementById('reflection' + option.charAt(0).toUpperCase() + option.slice(1)).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
