@@ -48,6 +48,7 @@
 </head>
 <body>
 
+    <!-- Scenario 1: Raising Student Voice -->
     <div class="scenario">
         <h3>Scenario 1: Raising Student Voice</h3>
         <p>You are working with a student who is shy and often hesitates to speak up in group discussions. During a class project, the student has a brilliant idea, but the group is not listening to them.</p>
@@ -69,6 +70,7 @@
         </div>
     </div>
 
+    <!-- Scenario 2: Inviting Multi-Generational Learning -->
     <div class="scenario">
         <h3>Scenario 2: Inviting Multi-Generational Learning</h3>
         <p>A student in your group is struggling to grasp a science concept. You have a colleague who is an expert in this topic and has agreed to come in to help.</p>
@@ -90,21 +92,137 @@
         </div>
     </div>
 
-    <script>
-        function showReflection(option) {
-            // Hide all reflections first
-            var reflections = document.querySelectorAll('.reflection');
-            reflections.forEach(function(reflection) {
-                reflection.style.display = 'none';
-            });
+    <!-- Scenario 3: Eliciting Diverse Sense Making & Ways of Knowing -->
+    <div class="scenario">
+        <h3>Scenario 3: Eliciting Diverse Sense Making & Ways of Knowing</h3>
+        <p>You are working with a student who is very hands-on and learns best by creating models and physical representations. In contrast, the rest of the class is using traditional note-taking methods.</p>
 
-            // Show the reflection based on the selected option
-            var selectedReflection = document.getElementById('reflection' + option);
-            if (selectedReflection) {
-                selectedReflection.style.display = 'block';
-            }
-        }
-    </script>
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('G')">A) Encourage the student to stick with the class and use the same method as everyone else.</button></li>
+            <li><button class="btn" onclick="showReflection('H')">B) Validate the student's preferred learning style and let them express their ideas in a hands-on way, while also encouraging other students to share their methods.</button></li>
+            <li><button class="btn" onclick="showReflection('I')">C) Tell the student their method is too time-consuming and force them to follow the traditional approach.</button></li>
+        </ul>
+
+        <div id="reflectionG" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A not a good approach? How can adhering to a single method limit the student’s potential?</p>
+        </div>
+        <div id="reflectionH" class="reflection">
+            <p><strong>Reflection:</strong> Why is option B the best choice? How does validating diverse ways of knowing benefit all students?</p>
+        </div>
+        <div id="reflectionI" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not an effective choice? How does ignoring the student's preferred learning style impact their motivation?</p>
+        </div>
+    </div>
+
+    <!-- Scenario 4: Engaging in Place-Based Learning -->
+    <div class="scenario">
+        <h3>Scenario 4: Engaging in Place-Based Learning</h3>
+        <p>Your class is about to start a new project focused on local environmental issues. A student suggests incorporating a local historical site into the project.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('J')">A) Dismiss the suggestion and stick to the original plan, focusing only on scientific aspects.</button></li>
+            <li><button class="btn" onclick="showReflection('K')">B) Encourage the student to research and integrate the historical site into the project, fostering connections between history, science, and the community.</button></li>
+            <li><button class="btn" onclick="showReflection('L')">C) Limit the project to the students' classroom research without considering real-world connections.</button></li>
+        </ul>
+
+        <div id="reflectionJ" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A not effective? How does ignoring place-based learning limit students' understanding of their community?</p>
+        </div>
+        <div id="reflectionK" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the most effective choice? How does connecting students to the community improve their learning?</p>
+        </div>
+        <div id="reflectionL" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not a good choice? How does not engaging with the real world affect student relevance and learning?</p>
+        </div>
+    </div>
+
+    <!-- Scenario 5: Unpacking the Community as a System -->
+    <div class="scenario">
+        <h3>Scenario 5: Unpacking the Community as a System</h3>
+        <p>During a community project, a student raises a concern about local pollution. They suggest that everyone should be aware of the larger systems that cause this issue.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('M')">A) Ignore the student’s concerns and keep the project focused on smaller, individual actions.</button></li>
+            <li><button class="btn" onclick="showReflection('N')">B) Help the student explore the issue by examining the broader systems at play, and guide them to see how their actions can make an impact.</button></li>
+            <li><button class="btn" onclick="showReflection('O')">C) Suggest the student look for answers in books, ignoring the community context.</button></li>
+        </ul>
+
+        <div id="reflectionM" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A not a good approach? How can ignoring the systems behind an issue hinder deeper understanding?</p>
+        </div>
+        <div id="reflectionN" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the best approach? How does unpacking community systems help students become agents of change?</p>
+        </div>
+        <div id="reflectionO" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not the best? How does disregarding the community context affect students' understanding of the broader picture?</p>
+        </div>
+    </div>
+
+    <!-- Scenario 6: Developing Opportunities for Shared Inquiry -->
+    <div class="scenario">
+        <h3>Scenario 6: Developing Opportunities for Shared Inquiry</h3>
+        <p>A student proposes a new topic for discussion, but it’s outside the scope of the planned lesson. Some of the class is excited, but others are skeptical.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('P')">A) Reject the student’s idea because it doesn’t fit with the lesson plan.</button></li>
+            <li><button class="btn" onclick="showReflection('Q')">B) Open up a discussion about the student’s idea and find a way to explore it while still covering the planned material.</button></li>
+            <li><button class="btn" onclick="showReflection('R')">C) Ignore the student's suggestion and continue with the lesson.</button></li>
+        </ul>
+
+        <div id="reflectionP" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A limiting? How does rejecting students' ideas hinder inquiry and engagement?</p>
+        </div>
+        <div id="reflectionQ" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the best choice? How does engaging in shared inquiry promote deeper understanding?</p>
+        </div>
+        <div id="reflectionR" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not effective? How does ignoring new ideas limit the potential for growth in the classroom?</p>
+        </div>
+    </div>
+
+    <!-- Scenario 7: Empowering Learners to Build Confidence -->
+    <div class="scenario">
+        <h3>Scenario 7: Empowering Learners to Build Confidence</h3>
+        <p>A student consistently doubts their ability to succeed in math, despite doing well on assignments.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('S')">A) Tell the student they are capable but leave it at that.</button></li>
+            <li><button class="btn" onclick="showReflection('T')">B) Help the student reflect on their strengths and success, offering them specific praise and actionable steps to build their confidence further.</button></li>
+            <li><button class="btn" onclick="showReflection('U')">C) Tell the student to keep practicing until they feel more confident.</button></li>
+        </ul>
+
+        <div id="reflectionS" class="reflection">
+            <p><strong>Reflection:</strong> Why is option A a missed opportunity? How does simply telling the student they are capable fall short?</p>
+        </div>
+        <div id="reflectionT" class="reflection">
+            <p><strong>Reflection:</strong> Why was option B the most empowering? How does providing specific praise and guidance contribute to building the student's confidence?</p>
+        </div>
+        <div id="reflectionU" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C insufficient? How does telling the student to practice without guidance leave them feeling unsupported?</p>
+        </div>
+    </div>
+
+    <!-- Scenario 8: Belonging through Relationships -->
+    <div class="scenario">
+        <h3>Scenario 8: Belonging through Relationships</h3>
+        <p>A new student joins your class mid-year and is struggling to make friends and feel comfortable.</p>
+
+        <ul class="options">
+            <li><button class="btn" onclick="showReflection('V')">A) Pair the student with a buddy and encourage group activities to help them fit in.</button></li>
+            <li><button class="btn" onclick="showReflection('W')">B) Ignore the student's struggle, assuming they’ll adjust eventually.</button></li>
+            <li><button class="btn" onclick="showReflection('X')">C) Tell the student to ask their classmates for help if they need it.</button></li>
+        </ul>
+
+        <div id="reflectionV" class="reflection">
+            <p><strong>Reflection:</strong> Why was option A the best choice? How does fostering belonging through peer relationships enhance the student's experience?</p>
+        </div>
+        <div id="reflectionW" class="reflection">
+            <p><strong>Reflection:</strong> Why is option B not effective? How does ignoring the student's social needs affect their engagement?</p>
+        </div>
+        <div id="reflectionX" class="reflection">
+            <p><strong>Reflection:</strong> Why is option C not the best approach? How can more proactive steps build stronger relationships?</p>
+        </div>
+    </div>
 
 </body>
 </html>
